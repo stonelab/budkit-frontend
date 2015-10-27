@@ -1,0 +1,31 @@
+{
+  "name": "budkit/front-end",
+  "version": "0.0.9",
+  "homepage": "https://github.com/budkit/budkit-cms",
+  "authors": [
+    "Livingstone Fultang <livingstonefultang@gmail.com>"
+  ],
+  "description": "The default front-end theme for the budkit cms",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "autobahnjs": "autobahn#~0.9.8",
+    "chosen": "~1.4.2",
+    "when": "~3.7.4",
+    "editor.md": "~1.5.0",
+    "bootstrap": "~3.3.5",
+    "flat-ui": "~2.2.2",
+    "font-awesome": "fontawesome#~4.4.0",
+    "Ionicons": "ionicons#~2.0.1",
+    "requirejs": "~2.1.20",
+    "gmaps": "~0.4.21"
+  }
+}

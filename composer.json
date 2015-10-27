@@ -1,0 +1,18 @@
+{
+    "name": "budkit/frontend",
+    "description": "A front-end theme for budkit/cms",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Livingstone Fultang",
+            "email": "livingstonefultang@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": { "Budkit\\Frontend\\": "src/"}
+    }
+}
+
