@@ -39,13 +39,13 @@ class Provider implements Service
         $themes     = $event->getResult();
         $themes[]   = [
             "provider" => "budkit/frontend",
-            "name"  => "Frontend",
-            "source"=> $this->getPackageDir()
+            "name"  => "theme",
+            "source"=> $this->getPackageDir()."../src/theme"
         ];
 
         //Tell the system to use this as the default theme!, This should be set from configuration!
-        $this->application->config->get("design.theme.provider", "budkit/frontend");
-        $this->application->config->get("design.theme.name", "frontend");
+        $this->application->config->set("design.theme.provider", "budkit/frontend");
+        $this->application->config->set("design.theme.name", "theme");
 
         //Register the theme
         $event->setResult( $themes ); //all members who call this even need to append to the result;

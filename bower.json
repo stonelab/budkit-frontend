@@ -26,6 +26,9 @@
     "font-awesome": "fontawesome#~4.4.0",
     "Ionicons": "ionicons#~2.0.1",
     "requirejs": "~2.1.20",
-    "gmaps": "~0.4.21"
+    "gmaps": "~0.4.21",
+    "jquery.cookie": "~1.4.1",
+    "googlemaps-amd": "git://github.com/aerisweather/googlemaps-amd.git#~1.0.1",
+    "typeahead-addresspicker": "~0.1.4"
   }
 }
