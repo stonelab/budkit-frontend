@@ -239,6 +239,9 @@
   &-asbestos {
     color: @asbestos;
   }
+  &-white {
+    color: white;
+  }
 }
 
 .label- {
@@ -256,16 +259,16 @@
 
 //Layouts
 .container {
-  &-search {
+  &-search, &-form {
 
     background: #FDFCFC;
-    padding: 5px @grid-gutter-width 0;
+    padding: @grid-gutter-width * 0.5;
     border-bottom: 1px solid @clouds;
     label {
-      font-size: @font-size-base * 0.5;
-      font-weight: 800;
+      font-size: @font-size-base * 0.6;
+      //font-weight: 800;
       text-transform: uppercase;
-      color: @gray-light;
+      //color: @gray-light;
     }
     .input-group-addon {
       color: @gray-light;
@@ -292,16 +295,51 @@
     left:0;
     right: -20px;
     bottom:0;
-    &:not(.no-scroll){
+    &:not(.no-scroll):not(.scroll){
       padding-right: 20px;
       overflow-y: auto;
     }
-    &.no-scroll{
+    &.no-scroll, &.scroll{
       right: 0;
-      padding-right: inherit;
+      //padding-right: inherit;
+    }
+    &.scroll{
+      overflow-y: auto;
     }
   }
-  &-side, &-main, &-aside, &-sside, &-iside {
+  &-heading{
+
+    padding: @grid-gutter-width*((1/3)) @grid-gutter-width*0.5 @grid-gutter-width*((1/3)*0.9);
+    background-color: #FDFCFC;
+    border-bottom: 1px solid @clouds;
+    color: @gray-light;
+    font-weight: 600;
+    font-size: @font-size-small*0.82;
+
+    text-transform: uppercase;
+    text-align: left;
+
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+    a {
+      color: @link-color;
+      text-transform: none;
+      font-weight: normal;
+      text-decoration: none;
+    }
+
+    //margin-right on every child element;
+    //> * { margin-right: 5px }
+
+    &~.container-block{
+      top: 40px;
+    }
+  }
+  &-side, &-main, &-aside, &-sside, &-iside, &-pside {
     display: inline-block;
     position: relative;
     height: 100%;
@@ -309,7 +347,8 @@
   }
   &-side {
     width: @sidebar-width;
-    position: fixed;
+    position: absolute;
+    background: darken(@sidebar-bg, 5%);
     &:not(.hide) ~ .container-main {
       margin-left: @sidebar-width;
     }
@@ -330,10 +369,21 @@
       margin-left: 2.5 * @sidebar-width;
     }
   }
+  &-pside {
+    width: 2 * @sidebar-width;
+    position: absolute;
+    right: 0; top:0; bottom:0;
+    border-left: 1px solid @clouds;
+    &:not(.hide) ~ .container-main {
+      margin-right : 2 * @sidebar-width;
+    }
+  }
   &-aside {
     width: @sidebar-width * 1.25;
-    position: fixed;
+    position: absolute;
     right: 0;
+    background: lighten(@clouds, 5%);
+    border-left: 1px solid @clouds;
     &:not(.hide) ~ .container-main {
       margin-right: @sidebar-width * 1.25;
     }

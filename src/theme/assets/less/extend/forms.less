@@ -56,7 +56,7 @@ label {
 
 
 .select2-drop{
-  border: 2px solid @brand-secondary;
+  border: 1px solid @brand-secondary;
 }
 
 .select2-drop {
@@ -103,7 +103,7 @@ label {
       display: inline-block;
       padding: 10px 15px;
       font-size: @font-size-base ;
-      border: 2px solid transparent;
+      border: 1px solid transparent;
     }
     input[type=radio]{
 
@@ -121,7 +121,7 @@ label {
       &:checked{
         & ~ span{
           .btn.active;
-          border: 2px solid @brand-secondary;
+          border: 1px solid @brand-secondary;
         }
       }
       &:disabled{
@@ -132,7 +132,7 @@ label {
       &:hover:not(:disabled){
         & ~ span{
           background: darken(@btn-default-bg, 2%);
-          border: 2px solid @brand-secondary;
+          border: 1px solid @brand-secondary;
         }
       }
     }
@@ -165,7 +165,7 @@ label {
     z-index: 1010;
     .box-sizing(border-box);
     width: 100%;
-    border: 2px solid @input-border;
+    border: 1px solid @input-border;
     border-top: 0;
     background: #fff;
     //box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
@@ -189,7 +189,7 @@ label {
       display: block;
       overflow: hidden;
       height: @input-height-base;
-      border: 2px solid @input-border;
+      border: 1px solid @input-border;
       background-color: #fff;
       background-clip: padding-box;
       border-radius: @input-border-radius;
@@ -226,7 +226,7 @@ label {
           text-decoration: none;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-          &:before{content: @ionicon-var-android-more-vertical }
+          &:before{content: @ionicon-var-ios-arrow-down }
         }
       }
       abbr {
@@ -281,7 +281,7 @@ label {
       display: block;
       overflow: hidden;
       height: 1%;
-      border: 2px solid @input-border;
+      border: 1px solid @input-border;
       background-color: #fff;
       background-clip: padding-box;
       color: @input-color;
@@ -334,12 +334,12 @@ label {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             &:before{
-              content: @ionicon-var-android-close;
+              content: @ionicon-var-ios-arrow-up;
             }
           }
           &-disabled {
             padding-right: 5px;
-            border: 2px solid #ccc;
+            border: 1px solid #ccc;
             background-color: #e4e4e4;
             color: #666;
           }
@@ -360,18 +360,18 @@ label {
   }
   &-active{
     .chosen-single {
-      border: 2px solid @brand-secondary;
+      border: 1px solid @brand-secondary;
       //box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
     &.chosen-with-drop{
       .chosen-single {
-        border: 2px solid @input-border;
+        border: 1px solid @input-border;
         //background: #F0F8FF;
         //border-bottom: 1px solid @input-border;
         //margin-bottom: 1px;
         div {
           b {
-            &:before{ content: @ionicon-var-android-more-vertical ; }
+            &:before{ content: @ionicon-var-ios-arrow-up ; }
           }
         }
       }
@@ -382,7 +382,7 @@ label {
           &.search-field{
             input[type="text"] {
               color: @input-color !important;
-              border: 2px solid @input-border;
+              border: 1px solid @input-border;
             }
           }
         }

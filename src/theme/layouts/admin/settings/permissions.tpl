@@ -6,8 +6,8 @@
                 <div class="panel panel-collapsible" id="authority-group-collapse">
                     <div class="panel-heading">
                         <div class="panel-title" data-toggle="collapse" data-parent="#authority-group-collapse" tpl:href="#group${authority_id}">
-                            <tpl:loop limit="indent">
-                                <span class="indenter">|--</span>
+                            <tpl:loop limitby="indent">
+                                <span class="ionicon ion-minus-round color-clouds mrs"></span>
                             </tpl:loop>
                             <a tpl:href="/settings/system/permissions/authority/${authority_id}"><span><tpl:data value="authority_title" /></span></a>
                             <a tpl:href="/settings/system/permissions/authority/edit/${authority_id}"><span class="pull-right"><i class="fa fa-cog"></i></span></a>

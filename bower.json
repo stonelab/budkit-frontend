@@ -29,6 +29,9 @@
     "gmaps": "~0.4.21",
     "jquery.cookie": "~1.4.1",
     "googlemaps-amd": "git://github.com/aerisweather/googlemaps-amd.git#~1.0.1",
-    "typeahead-addresspicker": "~0.1.4"
+    "typeahead-addresspicker": "~0.1.4",
+    "dropzone": "~4.2.0",
+    "ghostdown": "git://github.com/zipfworks/Ghost-Markdown-Editor.git",
+    "mustache.js": "~2.2.0"
   }
 }

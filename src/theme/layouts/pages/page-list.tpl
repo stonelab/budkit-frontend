@@ -60,16 +60,9 @@
                                     </label>
                                 </td>
                                 <td>
-
                                     <a tpl:href="/page/${object_uri}">
                                         <tpl:data value="media_title" />
-
-
                                     </a>
-                                        <tpl:condition on="object_created_on" test="not" is="object_updated_on">
-                                            <span class="label label-default">Modified</span>
-                                        </tpl:condition>
-
                                 </td>
                                 <td><tpl:datetime value="object_created_on" format="diff" /></td>
 
