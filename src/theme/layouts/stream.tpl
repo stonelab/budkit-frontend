@@ -93,6 +93,9 @@
                                     </ul>
                                 </div>
                             </div>
+                            <div class="stream-activity">
+                                <i class="ionicon ion-checkmark color-turquoise" />  <a class="author-username" href="#">@livingstonef</a> <span>approved this host</span>
+                            </div>
                             <div class="actions clearfix">
                                 <ul class="nav pull-left">
                                     <li>
@@ -124,9 +127,6 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div class="stream-activity">
-                        <i class="ionicon ion-checkmark color-turquoise" />  <a class="author-username" href="#">@livingstonef</a> <span>approved this host</span>
                     </div>
                 </li>
             </tpl:loop>

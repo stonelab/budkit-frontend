@@ -262,7 +262,7 @@
   &-search, &-form {
 
     background: #FDFCFC;
-    padding: @grid-gutter-width * 0.5;
+    padding: 0 @grid-gutter-width * 0.5;
     border-bottom: 1px solid @clouds;
     label {
       font-size: @font-size-base * 0.6;
@@ -371,11 +371,11 @@
   }
   &-pside {
     width: 2 * @sidebar-width;
-    position: absolute;
-    right: 0; top:0; bottom:0;
-    border-left: 1px solid @clouds;
+    position: relative;
+    //right: 0; top:0; bottom:0;
+    border-right: 1px solid @clouds;
     &:not(.hide) ~ .container-main {
-      margin-right : 2 * @sidebar-width;
+      margin-left :  2 *  @sidebar-width;
     }
   }
   &-aside {

@@ -426,16 +426,16 @@
   &-grid {
     position: relative;
     height: 100%;
-    .stream-line {
+    .stream-line, .stream-title {
       display: none;
     }
     .stream {
       //.img-responsive{width: 100%; .box-sizing(border-box)}
-      margin-left: -10px;
-      margin-right: -10px;
+      //margin-left: -10px;
+      //margin-right: -10px;
       .stream-cover{
-        width: 400px;
-        height: 200px;
+        width: 100%;
+        max-height: 200px;
         display: block;
         i {
           font-size: 100px;
@@ -445,11 +445,13 @@
         }
       }
       .stream-item {
-        width: 400px;
+        //width: 400px;
         display: inline-block;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 20px;
+        //margin-left: 10px;
+        //margin-right: 10px;
+        //margin-bottom: 20px;
+        margin-top: @grid-gutter-width * 0.5;
+        border: none;
         .featured-img, .featured-media, .cover-img, .extra {
           //top:@grid-gutter-width*(1/3);
           & ~ .extra {
@@ -563,9 +565,13 @@
 
 .stream-collapsed {
   .stream-activity{
-    padding-left: 10px+ @grid-gutter-width*(5/3);
+    //padding-left:  @grid-gutter-width*(5/3);
+    padding-left: 0px;
     border-top: none;
     border-bottom: 1px dotted rgba(204, 204, 204, 0.07);
+   &:last-child{
+     border-bottom: none;
+   }
 
   }
   .stream-list {
@@ -603,14 +609,14 @@
         }
         .item, .link {
           //padding-top: @grid-gutter-width * 0.2;
-          padding-bottom: 0;
+          //padding-bottom: 0;
           min-height: 85px;
           &.has-featured-img {
             //padding: @grid-gutter-width;
             padding-left: 10px+ @grid-gutter-width*(5/3);
             //min-height: (30px+@grid-gutter-width);
             & ~ .stream-activity{
-              padding-left: 10px + @grid-gutter-width*(5/3);
+              padding-left:  @grid-gutter-width*(5/3);
             }
           }
         }
@@ -622,14 +628,14 @@
 
 .stream-list-editor{
   position: absolute;
-  top: 0px;
+  bottom: 0px;
   left: 0px;
   right: 0px;
   height: 100px;
   padding: 10px;
-  border-bottom: 1px solid @clouds;
+  border-top: 1px solid @clouds;
   &~.container-block{
-    top:140px;
+    bottom:100px;
   }
   .stream-editor{
     //background-color: #FDFCFC;
@@ -665,7 +671,7 @@
   //margin-right on every child element;
   > * { margin-right: 5px }
 
-  &~.stream-list-editor{
+  &~.container-block{
     top: 40px;
   }
 }
@@ -682,7 +688,7 @@
       border-bottom: none;
     }
     .step-number{
-      border-width: 5px;
+      border-width: 2px;
       border-color: lighten(@clouds, 3%);
       border-style: solid;
       background: white;
@@ -718,6 +724,7 @@
     border: none;
     margin-bottom: 15px;
     font-size: 1em;
+    padding-left: 0;
   }
 
   .stream-list {

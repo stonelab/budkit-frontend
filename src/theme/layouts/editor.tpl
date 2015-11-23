@@ -42,10 +42,10 @@
                                         <div class="editorwrap">
                                             <section class="entry-markdown">
                                                 <section class="entry-markdown-content">
-                                                            <textarea name="media_content" id="entry-markdown"
-                                                                      tpl:placeholder="Type ${editor} content here in markdown">
-                                                                <tpl:data value="editing.media_content"/>
-                                                            </textarea>
+                                                    <textarea name="media_content" id="entry-markdown"
+                                                              tpl:placeholder="Type ${editor} content here in markdown">
+                                                        <tpl:data value="editing.media_content"/>
+                                                    </textarea>
                                                 </section>
                                                 <input type="hidden" name="object_uri" tpl:value="${object_uri}"/>
                                                 <input type="hidden" name="csrftoken" tpl:value="${csrftoken}"/>
