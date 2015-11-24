@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tpl:layout xmlns:tpl="http://budkit.org/tpl" name="single">
+    <script id="single" type="tpl/mustache">
+        <span class="stream-label"></span>
+        <div class="stream-line"/>
+        <div class="link has-featured-img">
+            <a href="#" class="featured-img person">
+                <img class="person-photo" src="{{author.pic.url}}"  width="50" height="50" />
+                <span class="person-status {{author.status}}"></span>
+            </a>
+            <h3 class="subject heading">
+                <a href="{{author.profile.url}}" class="author">{{author.name}}</a>
+                <a href="{{author.profile.url}}" class="profile">@{{author.username}}</a>
+                <a href="/member/timeline/{{object.uri}}" class="time"><span>{{media_published}}</span> </a>
+                <span class="pins">
+                    <a href="permalink">
+                        <span class="label color-peter-river">
+                            <i class="fa fa-angle-double-right" title="conversation"/> 20
+                        </span>
+                    </a>
+                </span>
+            </h3>
+            <div class="summary">{{media_summary}}</div>
+            <div class="body clearfix">
+                <div class="content clearfix">
+                    {{media_body}}
+                </div>
+                <div class="stream-media">
+                    <ul class="media-grid media-gallery compensate-margins">
+                        <li class="media-grid-fluid">
+                            <div class="feature">
+                                <a href="#">
+                                    <div class="media-grid-col1 list-hide">
+                                        <img src="/theme/assets/img/placeholders/tree2.jpg" class="media-item"
+                                             width="170" height="170"/>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="name">The Subject or Title</div>
+                                        <div class="kind">
+                                            <span class="type">JPEG</span>
+                                            <span class="size">(47kb)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="media-grid-fluid">
+                            <div class="feature">
+                                <a href="#">
+                                    <div class="media-grid-col1 list-hide">
+                                        <img src="/theme/assets/img/placeholders/birds.jpg" class="media-item"
+                                             width="250" height="170"/>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="name"> The Subject or Title</div>
+                                        <div class="kind">
+                                            <span class="type">JPEG</span>
+                                            <span class="size">(47kb)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="media-grid-fluid">
+                            <div class="feature">
+                                <a href="#">
+                                    <div class="media-grid-col1 list-hide">
+                                        <img src="/theme/assets/img/placeholders/tree.jpg" class="media-item"
+                                             width="170" height="170"/>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="name">The Subject or Title</div>
+                                        <div class="kind">
+                                            <span class="type">JPEG</span>
+                                            <span class="size">(47kb)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="actions clearfix">
+                <ul class="nav pull-left">
+                    <li>
+                        <a href="/member/timeline/{{object.uri}}/edit" class="edit">
+                            <i class="ionicons ion-android-star"/>
+                            <span>Edit</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="share">
+                            <i class="ionicons ion-android-share"/>
+                            <span>Match</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="edit">
+                            <i class="ionicons ion-compose"/>
+                            <span>Edit</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav  pull-right">
+                    <li>
+                        <a href="#" class="delete">
+                            <i class="ion-android-delete"/>
+                            <span>Delete</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="stream-activity">
+            <i class="ionicon ion-ribbon-b color-carrot"/>
+            <span>Matched with request</span>
+            <a class="author-username" href="#">#124</a>
+        </div>
+    </script>
+</tpl:layout>

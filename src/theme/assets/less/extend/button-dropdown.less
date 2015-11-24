@@ -1,0 +1,78 @@
+//btn dropdowns
+.btn-dropdown(@background-color, @divider-color, @link-color:white, @hover-background-color, @active-background-color){
+  &~.dropdown-menu{
+      background: @background-color;
+    // Dividers (basically an hr) within the dropdown
+    .divider {
+      .nav-divider(@divider-color);
+    }
+
+    // Links within the dropdown menu
+    > li > a {
+      color: @link-color;
+      &:hover,
+      &:focus {
+        background-color: @hover-background-color;
+      }
+    }
+    // Typeahead (deprecated)
+    &.typeahead {
+      border: 2px solid @brand-secondary;
+      background-color: @inverse;
+
+      li {
+        a {
+          padding: 6px 14px;
+        }
+        &:first-child,
+        &:last-child {
+          a {
+            padding: 6px 14px;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+    // Active state
+      & > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @active-background-color;
+      }
+    }
+
+    // Disabled state
+    //
+    // Gray out text and ensure the hover/focus state remains gray
+
+     & > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @dropdown-link-disabled-color;
+        background-color: transparent;
+        cursor: @cursor-disabled;
+      }
+    }
+  }
+}
+
+
+.btn-danger{
+  .btn-dropdown(@btn-danger-bg, @btn-danger-border, @btn-danger-color, @btn-danger-hover-bg, @btn-danger-active-bg);
+}
+
+.btn-info{
+  .btn-dropdown(@btn-info-bg, @btn-info-border, @btn-info-color, @btn-info-hover-bg, @btn-info-active-bg);
+}
+
+.btn-success{
+  .btn-dropdown(@btn-success-bg, @btn-success-border, @btn-success-color, @btn-success-hover-bg, @btn-success-active-bg);
+}
+
+.btn-default{
+  .btn-dropdown(@btn-default-bg, @btn-default-border, @btn-default-color, @btn-default-bg, @btn-default-bg);
+}
+
+/* @end */
