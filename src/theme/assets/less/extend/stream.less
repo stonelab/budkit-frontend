@@ -679,13 +679,31 @@
 .stream-flow{
   padding: @grid-gutter-width * 0.3;
 
+
   .stream-list {
     min-height: 100%;
 
+    .stream-intro{
+      background-color: fade(@clouds, 20%);
+      padding: @grid-gutter-width;
+      font-size: 1.1em;
+    }
+
+    .stream-outro{
+      background-color: fade(@clouds, 20%);
+      padding: @grid-gutter-width;
+      font-size: 1.1em;
+    }
+
     .stream-item{
       margin-bottom: 20px;
-      padding-bottom: 20px;
+      padding-top: 20px;
+      padding-bottom: 40px;
       border-bottom: none;
+      .subject, .heading{
+        font-size: 1.2em;
+        //font-weight: normal;
+      }
     }
     .step-number{
       border-width: 2px;
@@ -709,7 +727,13 @@
     .stream-title {
       background: white;
       margin-bottom: @grid-gutter-width;
-      text-transform: inherit;
+      text-transform: uppercase;
+      &.end{
+        margin-top:@fluid-grid-gutter-width;
+        margin-bottom: -1.5 * @fluid-grid-gutter-width;
+        border-bottom:  none;
+        border-top: 2px solid lighten(@clouds, 3%);;
+      }
     }
     .stream-line {
       display: block;

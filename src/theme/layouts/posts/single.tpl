@@ -17,9 +17,9 @@
             <div class="stream-content stream-editor">
                 <form class="form-stream">
                     <div class="input-group">
-                                <span class="input-group-addon btn">
-                                    <i class="ionicons ion-plus" />
-                                </span>
+                        <span class="input-group-addon btn">
+                            <i class="ionicons ion-plus" />
+                        </span>
                         <textarea class="form-control" rows="3" placeholder="Say something"></textarea>
                     </div>
                 </form>

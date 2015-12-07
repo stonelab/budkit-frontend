@@ -7,7 +7,7 @@ requirejs.config({
   "paths": {
     // "masonry": "vendor/masonry/masonry.pkgd.min",
     "jquery" : "vendor/jquery/dist/jquery.min",
-    "jquery.ui" : "vendor/jquery-ui/ui/jquery-ui.min",
+    "jquery.ui" : "vendor/jquery-ui/jquery-ui.min",
     //"mes" : "vendor/mes/mediaelement-and-player.min",
     "autobahn" : "vendor/autobahnjs/autobahn.min",
     //"when": "vendor/when/when",
@@ -32,10 +32,11 @@ requirejs.config({
     //"budkit.uploader" : "vendor/budkit/budkit-uploader",
     //"budkit.chat" : "vendor/budkit/budkit-chat",
 
-    "budkit.editor" : "vendor/budkit/budkit-editor",
+    "budkit.editor" : "vendor/budkitjs/budkit-editor",
+    "budkit.fields" : "vendor/budkitjs/budkit-fields",
 
     //"budkit.modal" : "vendor/budkit/budkit-modal",
-    "budkit.map" : "vendor/budkitjs/map/budkit-map",
+    "budkit.map" : "vendor/budkitjs/budkit-map",
     "googlemaps" : 'vendor/googlemaps-amd/src/googlemaps',
     "gmaps" : "vendor/gmaps/gmaps.min",
     //"google.prettify":"//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify",
@@ -80,6 +81,10 @@ requirejs.config({
     //"bootstrap.summernote.highlight": ['jquery']
     ////'budkit.modal': ['jquery'],
     ////'budkit.chat': ['jquery'],
+    'budkit.fields': {
+        deps: ['jquery', 'jquery.ui'],
+        exports: "BKFields"
+    },
     'budkit.map': ['jquery']
   }
 });

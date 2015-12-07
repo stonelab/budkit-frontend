@@ -354,19 +354,19 @@
     }
   }
   &-sside {
-    width: 3 * @sidebar-width;
-    position: relative;
-    border-right: 1px solid @clouds;
-    &:not(.hide) ~ .container-main {
-      margin-left: 3 * @sidebar-width;
-    }
-  }
-  &-iside {
     width: 2.5 * @sidebar-width;
     position: relative;
     border-right: 1px solid @clouds;
     &:not(.hide) ~ .container-main {
       margin-left: 2.5 * @sidebar-width;
+    }
+  }
+  &-iside {
+    width: 50%;
+    position: relative;
+    border-right: 1px solid @clouds;
+    &:not(.hide) ~ .container-main {
+      margin-left: 50%;
     }
   }
   &-pside {
@@ -382,10 +382,16 @@
     width: @sidebar-width * 1.25;
     position: absolute;
     right: 0;
-    background: lighten(@clouds, 5%);
+    background: #FDFCFC;
     border-left: 1px solid @clouds;
     &:not(.hide) ~ .container-main {
       margin-right: @sidebar-width * 1.25;
+    }
+    &.overflow{
+      overflow: visible;
+      > .container-block{
+        overflow: visible;
+      }
     }
   }
   &-main {

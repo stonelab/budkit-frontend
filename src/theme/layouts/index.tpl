@@ -3,7 +3,7 @@
     <html lang="en">
         <head><tpl:import name="head" /> </head>
         <body tpl:class="${page.body.class}">
-            <div class="container-side sidebar" role="side"><!-- add "minimized" class to minimize-->
+            <div class="container-side sidebar minimized" role="side"><!-- add "minimized" class to minimize-->
                 <tpl:import name="sidebar" />
             </div>
             <div class="container-aside sidebar" role="aside">

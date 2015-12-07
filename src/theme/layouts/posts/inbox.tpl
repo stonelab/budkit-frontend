@@ -2,7 +2,7 @@
 <tpl:layout xmlns:tpl="http://budkit.org/tpl">
 
 
-        <div class="container-iside sidestream background-white" role="stream">
+        <div class="container-sside sidestream background-white" role="stream">
             <div class="container-block">
                 <div class="stream-collapsed">
                     <tpl:import name="posts/stream"/>
