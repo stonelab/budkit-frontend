@@ -85,6 +85,7 @@ define(function(require, exports, module) {
                 //This is necessary to ensure that fields are grouped properly
                 var fields      = panel.find('[name*="category_form"]'),
                     timestamp   = new Date().getTime();
+
                 $.each(fields, function(i, field){
                     //find the name attribute
                     $(field).prop("name", field.name.replace("category_form[]", "category_form["+timestamp+"]") );

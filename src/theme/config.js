@@ -34,6 +34,7 @@ requirejs.config({
 
     "budkit.editor" : "vendor/budkitjs/budkit-editor",
     "budkit.fields" : "vendor/budkitjs/budkit-fields",
+    "budkit.form" : "vendor/budkitjs/budkit-form",
 
     //"budkit.modal" : "vendor/budkit/budkit-modal",
     "budkit.map" : "vendor/budkitjs/budkit-map",
@@ -82,8 +83,12 @@ requirejs.config({
     ////'budkit.modal': ['jquery'],
     ////'budkit.chat': ['jquery'],
     'budkit.fields': {
-        deps: ['jquery', 'jquery.ui'],
-        exports: "BKFields"
+      deps: ['jquery', 'jquery.ui'],
+      exports: "BKFields"
+    },
+    'budkit.form': {
+      deps: ['jquery', 'jquery.ui'],
+      exports: "BKForm"
     },
     'budkit.map': ['jquery']
   }
