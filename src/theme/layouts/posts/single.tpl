@@ -3,9 +3,7 @@
 
 
             <div class="container-aside sidestream background-white" role="stream">
-                <div class="container-block">
-                    Participants etc
-                </div>
+                <div class="container-block"> </div>
             </div>
 
 

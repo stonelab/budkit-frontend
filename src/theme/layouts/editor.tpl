@@ -6,6 +6,10 @@
             <link href="/theme/assets/css/ghostdown.css" rel="stylesheet"/>
         </head>
         <body class="editing">
+        <div class="container-alert">
+            <tpl:import name="alerts"/>
+        </div>
+        <div class="container-relative">
             <div class="container-side minimized sidebar" role="side"><!-- add "minimized" class to minimize-->
                 <tpl:import name="sidebar"/>
             </div>
@@ -36,9 +40,6 @@
                                 <div class="features container-block no-scroll">
                                 <section class="editor container-block no-scroll">
                                     <div class="outer container-block no-scroll">
-                                        <div>
-                                            <tpl:import name="alerts"/>
-                                        </div>
                                         <div class="editorwrap">
                                             <section class="entry-markdown">
                                                 <section class="entry-markdown-content">
@@ -74,6 +75,7 @@
                 });
                 //]]>
             </script>
-        </body>
+        </div>
+         </body>
     </html>
 </tpl:layout>

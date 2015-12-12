@@ -39,10 +39,6 @@
                 <tpl:condition on="config://setup.site.registration" test="boolean" is="true">
                     <p class="text-center mbm color-clouds">Create an Account</p>
 
-                    <div class="login-alerts">
-                        <tpl:import name="alerts"/>
-                    </div>
-
                     <div class="login-form">
 
                         <form action="/member/signup" method="post">

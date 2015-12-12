@@ -32,6 +32,8 @@
     "typeahead-addresspicker": "~0.1.4",
     "dropzone": "~4.2.0",
     "ghostdown": "git://github.com/zipfworks/Ghost-Markdown-Editor.git",
-    "mustache.js": "~2.2.0"
+    "mustache.js": "~2.2.0",
+    "webcomponentsjs": "~0.7.19",
+    "polymer": "Polymer/polymer#^1.2.0"
   }
 }

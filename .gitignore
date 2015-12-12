@@ -19,3 +19,6 @@ src/theme/vendor/typeahead-addresspicker
 src/theme/vendor/typeahead.js
 src/theme/vendor/videojs
 src/theme/vendor/when
+src/theme/vendor/polymer
+src/theme/vendor/webcomponentsjs
+npm-debug.log

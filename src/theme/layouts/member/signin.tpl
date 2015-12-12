@@ -25,15 +25,12 @@
     <tpl:replace path="//div[@role='main']">
         <div class="container-main">
 
-
             <div class="login-screen">
 
                 <div class="text-center mtl mbm">
                     <a href="/"><img src="/theme/assets/img/logo-light.svg" width="60" /></a>
                 </div>
                 <p class="text-center mbm color-clouds"><tpl:data value="title" /></p>
-                <div class="login-alerts"><tpl:import name="alerts" /></div>
-
                 <div class="login-form">
                     <tpl:block name="content" /> <!--use block.content var to append data to this element-->
 

@@ -46,6 +46,14 @@ define(function(require, exports, module) {
                     return false;
                 })
 
+                //tabbing through items in the form should be disabled;
+                $form.find('input,select,textarea').keydown(function (e) {
+                    if (e.which === 9 ) {
+                        $nav.find('.current').trigger('click');
+                        return false;
+                    }
+                });
+
                 $.each($steps, function(i, step){
                     //console.log(step);
                     $(this).height( holder_height );
