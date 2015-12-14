@@ -34,6 +34,8 @@
     "ghostdown": "git://github.com/zipfworks/Ghost-Markdown-Editor.git",
     "mustache.js": "~2.2.0",
     "webcomponentsjs": "~0.7.19",
-    "polymer": "Polymer/polymer#^1.2.0"
+    "polymer": "Polymer/polymer#^1.2.0",
+    "html5shiv": "~3.7.3",
+    "html5formshim": "~2.3.1"
   }
 }

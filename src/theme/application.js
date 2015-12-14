@@ -1,9 +1,16 @@
 /**
  * Created by livingstonefultang on 10/27/13.
  */
-require(["jquery","jquery.cookie", "chosen","bootstrap","flat-ui"], function() {
+require(["jquery","jquery.cookie", "chosen","bootstrap","flat-ui", "html5formshim"], function() {
 
     var activeTabs = {};
+
+    // IE8 and below specific scripts
+    if ($('html.lt-ie9').size()) {
+        require(['html5shiv'], function(ieScript) {
+            // ... do stuff
+        });
+    }
 
     if($.cookie("activeTabs")){
         activeTabs = JSON.parse($.cookie("activeTabs"));

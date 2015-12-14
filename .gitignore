@@ -22,3 +22,5 @@ src/theme/vendor/when
 src/theme/vendor/polymer
 src/theme/vendor/webcomponentsjs
 npm-debug.log
+src/theme/vendor/html5formshim
+src/theme/vendor/html5shiv
