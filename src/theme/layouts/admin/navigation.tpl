@@ -8,13 +8,16 @@
         </button>
     </div>
     <div class="navbar-collapse collapse navbar-inverse-collapse pln" role="navbar-collapse">
-        <tpl:menu uid="usermenu" class="nav navbar-nav navbar-right"/>
+
         <button class="navbar-btn btn btn-sm btn-default sidebar-toggle navbar-left"
                 data-switch="minimized"
                 data-target=".sidebar">
             <i class="fa fa-bars"></i>
         </button>
-        <ul class="nav navbar-nav navbar-left mln">
+
+        <span class="navbar-text navbar-text-title navbar-left"><tpl:data value="title" /></span>
+
+        <ul class="nav navbar-nav navbar-right mln">
             <li>
                 <div class="btn-group navbar-btn mln">
                     <form class="" action="/post/create" method="get">
@@ -46,7 +49,7 @@
 
         <tpl:block position="navbar-button"/>
 
-        <form class="navbar-form navbar-left plm prn" action="#" role="search">
+        <form class="navbar-form navbar-right plm prn" action="#" role="search">
             <div class="form-group">
                 <div class="input-group">
                     <input class="form-control flat" id="navbarInput-01" type="search" placeholder="Search"/>

@@ -15,9 +15,20 @@
                                   class="featured-img person" width="50" height="50"/>
                         <div class="stream-content">
                             <h3 class="subject heading">
-                                <a href="#" class="subject">Livingstone Fultang</a>
-                                <a href="#" class="author"> @livingstonef</a>
-                                <a href="#" class="time"><span>2 hours ago</span> </a>
+                                <a href="#" class="author">Livingstone Fultang</a>
+                                <a href="#" class="profile"> @livingstonef</a>
+                            <span class="pins">
+                                <a href="/member/timeline/1AgdAGAEgsd">
+                                    <span class="label color-peter-river">
+                                        <i class="ionicons ion-ios-pulse-strong" title="conversation"/> 20
+                                    </span>
+                                </a>
+                                <a href="/member/timeline/1AgdAGAEgsd" class="time">
+                                    <span class="label color-orange">
+                                         <i class="ionicons ion-clock" title="timeg"/> 2h
+                                    </span>
+                                </a>
+                            </span>
                             </h3>
 
                             <div class="summary">Good result for <a href="">@Hugh_Small</a> and <a

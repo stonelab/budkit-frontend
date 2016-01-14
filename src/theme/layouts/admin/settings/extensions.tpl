@@ -1,5 +1,5 @@
 <tpl:layout xmlns="http://www.w3.org/1999/xhtml" xmlns:tpl="http://budkit.org/tpl">
-    <div class="padding">  
+    <div class="padding ptm">
         <div class="clearfix">
             <form class="pull-right input-prepend">   
                 <i class="icon-search add-on"></i>

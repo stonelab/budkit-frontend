@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tpl:layout name="pages" xmlns:tpl="http://budkit.org/tpl">
-    <div class="col-md-12 ptm">
+    <div class="col-md-12">
         <div class="panel panel-list">
 
             <div class="panel-heading clearfix">
@@ -44,7 +44,8 @@
                         <tr>
 
                             <th width="2%"></th>
-                            <th width="38%">Title</th>
+                            <th width="3%"></th>
+                            <th width="35%">Title</th>
                             <th>Created</th>
                             <th>Author</th>
                             <th width="18%">Permalink</th>
@@ -52,7 +53,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tpl:loop foreach="pages.items">
+                        <tpl:loop repeat="5">
                             <tr>
                                 <td>
                                     <label class="checkbox">
@@ -60,10 +61,16 @@
                                     </label>
                                 </td>
                                 <td>
+                                    <tpl:link rel="person" href="#" status="offline" src="/theme/assets/img/avatars/me.png"
+                                              class="featured-img person" width="50" height="50"/>
+                                </td>
+                                <td>
+
                                     <a tpl:href="/page/${object_uri}">
                                         <tpl:data value="media_title" />
                                     </a>
                                 </td>
+
                                 <td><tpl:datetime value="object_created_on" format="diff" /></td>
 
                                 <td><a tpl:href="/member/${media_owner.uri}">@<tpl:data value="media_owner.uri" /></a></td>

@@ -7,17 +7,7 @@
                 <tpl:import name="admin/navigation" />
             </div>
             <div class="container-block prm plm scroll">
-                <div class="page-header">
-                    <h1 class="mvn">
-                        <span><tpl:data value="title" /></span>
-                        <tpl:condition on="alerts" test="empty" is="false">
-                            <tpl:loop foreach="alerts">
-                                <p tpl:class="color-${type} mvn"> <tpl:data value="message" /></p>
-                            </tpl:loop>
-                        </tpl:condition>
-                    </h1>
-                </div>
-                <div class="pls prs ptl pbl">
+                <div class="pls prs pbl">
                     <div class="row">
                         <tpl:block position="main" />
                     </div>

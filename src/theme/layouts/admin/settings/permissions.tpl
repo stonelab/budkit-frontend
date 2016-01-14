@@ -1,5 +1,5 @@
 <tpl:layout xmlns="http://www.w3.org/1999/xhtml" xmlns:tpl="http://budkit.org/tpl">
-    <div class="col-md-9">
+    <div class="col-md-9 ptm">
         <div class="panel-group condensed" id="authority-group-collapse">
 
             <tpl:loop foreach="authorities" id="authority-groups">

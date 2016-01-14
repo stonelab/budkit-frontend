@@ -8,5 +8,7 @@
          </div>
         <br />
         <tpl:menu uid="dashboardmenu" type="nav-stacked" show-icons="true" class="nav menu" />
+        <hr />
+        <tpl:menu uid="usermenu" type="nav-stacked" show-icons="true" class="nav menu"/>
     </div>
 </tpl:layout>

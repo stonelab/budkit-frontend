@@ -1,5 +1,5 @@
 <tpl:layout xmlns:tpl="http://budkit.org/tpl">
-    <div class="col-md-12">
+    <div class="col-md-12 ptm">
         <div class="panel">
             <div class="panel-body">
                 <form class="form-vertical col-md-12 col-sm-12 col-lg-8" method="POST" action="/admin/settings/save">

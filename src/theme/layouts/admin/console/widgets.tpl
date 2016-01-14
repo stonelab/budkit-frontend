@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tpl:layout  xmlns:tpl="http://budkit.org/tpl" name="widgets">
-    <div class="col-md-12">
+    <div class="col-md-12 ptm">
 
         <div class="panel panel-statistic">
             <div class="panel-heading">
