@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tpl:layout xmlns:tpl="http://budkit.org/tpl">
 
-
     <div class="container-aside sidestream background-white" role="stream">
-        <div class="container-block"> </div>
+        <div class="container-heading">
+            Activity
+        </div>
+        <div class="container-block background-whhite">
+            <tpl:import name="/posts/post-ticker" />
+        </div>
     </div>
 
 
@@ -15,22 +19,23 @@
             </div>
         </tpl:condition>
         <div class="stream-list-editor">
-            <div class="stream-content stream-editor">
-                <form class="form-stream">
-                    <div class="input-group">
-                        <span class="input-group-addon btn">
-                            <i class="ionicons ion-plus" />
-                        </span>
-                        <textarea class="form-control" rows="3" placeholder="Say something"></textarea>
-                    </div>
-                </form>
-            </div>
+           <tpl:import name="/posts/post-editor" />
         </div>
-        <div class="container-block stream-list-content background-white">
+        <div class="container-block stream-list-content">
             <div class="stream-detailed">
                 <tpl:import name="stream" />
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        require(['config'], function () {
+            require(['jquery'], function() {
+                var d = $('.container-block.stream-list-content');
+                d.scrollTop(d.prop("scrollHeight"));
+            })
+        });
+        //]]>
+    </script>
 </tpl:layout>
 

@@ -159,19 +159,19 @@
 
 /**Colors**/
 .color {
-  &-error, &-urgent{
+  &-error, &-urgent, &-Urgent{
     color: @brand-danger;
     font-weight: bold;
   }
-  &-success, &-done{
+  &-success, &-done,  &-Done{
     color: @brand-success;
     font-weight: bold;
   }
-  &-info, &-information{
+  &-info, &-information,&-Information{
     color: @brand-info;
     font-weight: bold;
   }
-  &-warning, &-task{
+  &-warning, &-task,&-Task{
     color: @brand-warning;
     font-weight: bold;
   }
@@ -386,10 +386,10 @@
     }
   }
   &-aside {
-    width: @sidebar-width * 1.25;
+    width: (@sidebar-width * 1.25) - 1;
     position: absolute;
     right: 0;
-    background: #FDFCFC;
+    //background: #FDFCFC;
     border-left: 1px solid @clouds;
     &:not(.hide) ~ .container-main {
       margin-right: @sidebar-width * 1.25;

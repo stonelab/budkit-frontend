@@ -11,7 +11,7 @@
                 <tpl:import name="alerts" />
             </div>
             <div class="container-relative">
-                <div class="container-side sidebar" role="side"><!-- add "minimized" class to minimize-->
+                <div tpl:class="container-side sidebar ${sbstate}" role="side"><!-- add "minimized" class to minimize-->
                     <tpl:import name="sidebar" />
                 </div>
                 <div class="container-aside sidebar" role="aside">

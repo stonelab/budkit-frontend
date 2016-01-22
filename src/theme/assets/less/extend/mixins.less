@@ -9,6 +9,15 @@
 }
 
 
+// https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+.border-radius (@string: 5px) {
+  /* border-radius *///
+  -webkit-border-radius: @string;
+  -moz-border-radius: @string;
+  border-radius: @string;
+}
+
+
 //// Utilities
 //@import "mixins/hide-text.less";
 //@import "mixins/opacity.less";

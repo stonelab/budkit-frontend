@@ -53,7 +53,7 @@
         </div><!-- panel -->
 
         <div class="row panel-statistics">
-            <div class="col-sm-6">
+            <div class="col-sm-6 prn">
                 <div class="panel panel-updates">
                     <div class="panel-body">
                         <div class="row">
@@ -97,7 +97,7 @@
                 </div><!-- panel -->
             </div><!-- col-sm-6 -->
 
-            <div class="col-sm-6">
+            <div class="col-sm-6 prn">
                 <div class="panel panel-success-full panel-updates">
                     <div class="panel-body">
                         <div class="row">

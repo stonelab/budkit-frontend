@@ -17,9 +17,31 @@
 
         <span class="navbar-text navbar-text-title navbar-left"><tpl:data value="title" /></span>
 
-        <ul class="nav navbar-nav navbar-right mln">
+        <form class="navbar-form navbar-right prs plm mll" action="#" role="search">
+            <div class="form-group">
+                <div class="input-group">
+                    <input class="form-control flat" id="navbarInput-01" type="search" placeholder="Search"/>
+                      <span class="input-group-btn flat">
+                        <button type="submit" class="btn"><span class="fui-search"></span></button>
+                      </span>
+                </div>
+            </div>
+        </form>
+
+        <ul class="nav navbar-nav navbar-right mrl">
+            <tpl:condition on="action" test="empty" is="false">
+                <tpl:loop foreach="action">
+                    <li>
+                        <div class="btn-group mtm  mlm mrn">
+                            <a tpl:class="btn btn-sm ${class}" tpl:href="${link}">
+                                <tpl:data value="title"/>
+                            </a>
+                        </div>
+                    </li>
+                </tpl:loop>
+            </tpl:condition>
             <li>
-                <div class="btn-group navbar-btn mln">
+                <div class="btn-group navbar-btn mln mrm">
                     <form class="" action="/post/create" method="get">
                         <button type="submit" class="btn btn-sm btn-danger">New Post</button>
                         <button data-toggle="dropdown" class="btn btn-sm btn-danger dropdown-toggle"><span
@@ -34,30 +56,7 @@
                     </form>
                 </div>
             </li>
-            <tpl:condition on="action" test="empty" is="false">
-                <tpl:loop foreach="action">
-                    <li>
-                        <div class="btn-group navbar-btn mlm">
-                            <a tpl:class="btn btn-sm ${class}" tpl:href="${link}">
-                                <tpl:data value="title"/>
-                            </a>
-                        </div>
-                    </li>
-                </tpl:loop>
-            </tpl:condition>
         </ul>
 
-        <tpl:block position="navbar-button"/>
-
-        <form class="navbar-form navbar-right plm prn" action="#" role="search">
-            <div class="form-group">
-                <div class="input-group">
-                    <input class="form-control flat" id="navbarInput-01" type="search" placeholder="Search"/>
-                      <span class="input-group-btn flat">
-                        <button type="submit" class="btn"><span class="fui-search"></span></button>
-                      </span>
-                </div>
-            </div>
-        </form>
     </div>
 </tpl:layout>
