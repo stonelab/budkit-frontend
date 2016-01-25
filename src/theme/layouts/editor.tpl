@@ -6,9 +6,6 @@
             <link href="/theme/assets/css/ghostdown.css" rel="stylesheet"/>
         </head>
         <body class="editing">
-        <div class="container-alert">
-            <tpl:import name="alerts"/>
-        </div>
         <div class="container-relative">
             <div class="container-side minimized sidebar" role="side"><!-- add "minimized" class to minimize-->
                 <tpl:import name="sidebar"/>
