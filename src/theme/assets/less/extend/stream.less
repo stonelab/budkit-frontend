@@ -249,14 +249,10 @@
     }
     .stream-labels{
       position: absolute;
-      width: 55px;
-      left: 9px;
-      top: 90px;
-      text-align: center;
-      display: block;
+      left: 81px;
+      top: 20px;
       z-index: 1;
       .label{
-        display: block;
         margin: 0 auto 5px;
         width: 1px;
         height: 15px;
@@ -269,6 +265,9 @@
           line-height: 12px;
           text-indent: 0;
         }
+      }
+      &~.stream-content{
+        padding-top: 50px;
       }
     }
     .summary {
@@ -437,6 +436,9 @@
           margin: auto;
           line-height: 200px;
         }
+      }
+      .stream-labels{
+        left:0;
       }
       .stream-item {
         //width: 400px;
@@ -655,10 +657,11 @@
   left: 0px;
   right: 0px;
   height: @navbar-height-base * 1.15;
-  background: #ecf0f1;
+  //background: #ecf0f1;
   padding: 10px;
+  z-index: 1000;
   &~.container-block{
-    bottom: (@navbar-height-base * 1.15) + 2
+    //bottom: (@navbar-height-base * 1.15) + 2
   }
   .twitter-typeahead{
     display: block !important;
@@ -673,10 +676,10 @@
 
 .stream-map-ruler{
   border-bottom: 1px solid @clouds;
-  height: @navbar-height-base;
+  height: @navbar-height-base * 0.65;
   position: relative;
   &~.container-block{
-    top: (@navbar-height-base) + 2
+    top: (@navbar-height-base * 0.65 ) + 2
   }
   .ruler{
     margin: 0;
@@ -698,7 +701,7 @@
         text-transform: uppercase;
         box-sizing: border-box;
         padding-left: 5px;
-        padding-top: 12px;
+        padding-top: 8px;
         color: @concrete
       }
     }

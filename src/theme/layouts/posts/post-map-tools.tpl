@@ -2,13 +2,8 @@
 <tpl:layout xmlns:tpl="http://budkit.org/tpl" name="stream-editor">
     <form  method="post">
         <div class="row">
-            <div class="col-md-6 prs">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="location" placeholder="Search.."/>
-                </div>
-            </div>
             <!--/.col-md-6-->
-            <div class="col-md-6 pln">
+            <div class="col-md-8">
                 <div class="input-group">
                     <input type="text" class="form-control  places-search" id="location" placeholder="Location"/>
                     <!--<span class="input-group-addon background-white">
@@ -21,9 +16,7 @@
                         <button type="button" class="btn btn-secondary">
                             <span class="fui fui-search"></span>
                         </button>
-
                     </div>
-
                 </div>
             </div>
         </div>

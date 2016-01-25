@@ -5,7 +5,7 @@
         <ul class="stream">
             <li class="stream-title">2 days ago</li>
 
-            <tpl:loop repeat="1">
+            <tpl:loop repeat="3">
                 <li class="stream-item">
                     <span class="stream-label"></span>
 

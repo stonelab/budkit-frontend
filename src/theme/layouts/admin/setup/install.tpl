@@ -9,8 +9,8 @@
     <!--Replace-->
     <tpl:replace path="//div[@role='main']">
         <div class="container-main admin" role="main">
-
-            <div class="container padding-top">
+            <div class="container-block">
+                <div class="container padding-top">
                 <!--<nav class="navbar navbar-inverse" role="navigation">
                     <div class="container-navigation">
                         <tpl:import name="search" />
@@ -24,6 +24,7 @@
                         </div><!-- panel -->
                     </div><!-- col-md-9 -->
                 </div>
+            </div>
             </div>
         </div>
     </tpl:replace>
