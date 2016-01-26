@@ -17,7 +17,7 @@
  * limitations under the License.
  * ========================================================== */
 "use strict"
-define(function(require, exports, module) {
+define(["jquery","jquery.validation"], function(require, exports, module) {
 
         var $ = window.jQuery,
             BKForm = function($form, options) {
@@ -28,13 +28,50 @@ define(function(require, exports, module) {
 
                 this.options    = $.extend({},$.fn.bkform.defaults, options)
 
-                this.form = $form,
-                this.holder = $form.parents(this.options.form_holder).first(),
-                this.nav    = $form.find(this.options.form_navigator).first(),
-                this.first  = $form.find(this.options.form_first_step).first(),
-                this.last   = $form.find(this.options.form_last_step).last(),
-                this.steps  = $form.find(this.options.form_step)
-                ;
+                this.form   = $form,
+                    this.holder = $form.parents(this.options.form_holder).first(),
+                    this.nav    = $form.find(this.options.form_navigator).first(),
+                    this.first  = $form.find(this.options.form_first_step).first(),
+                    this.last   = $form.find(this.options.form_last_step).last(),
+                    this.steps  = $form.find(this.options.form_step),
+                    this.validator = $form.validate(
+                        { onsubmit: false }
+                    );
+
+                //The on submite event;
+                this.form.submit (function(event){
+
+                    //Force validate the entire form;
+
+                    //validator.form();
+                    $.each($('[data-step]'), function(i, element){
+
+                        var $element = $(element);
+                        console.log($element);
+
+                        if($element.is(":input")) {
+                            $bkform.validator.element($element);
+                            if (!$element.valid()) {
+                                console.log($element.attr("data-step"));
+                                //Reset the current step to the previous step;
+                                $('[data-target-step="' + $element.attr("data-step") + '"]').addClass("error");
+                            } else {
+                                $('[data-target-step="' + $element.attr("data-step") + '"]').removeClass("error");
+                            }
+                        }
+                    });
+
+                    var validator = $bkform.form.validate();
+                    var errors = validator.numberOfInvalids();
+
+                    console.log("Force validate the form and count errors");
+                    console.log(errors);
+
+                    if (errors > 0 ) {
+                        //Will not submit the form if there is more than 0 errors
+                        event.preventDefault();
+                    }
+                });
 
                 var holder_height = this.holder.height();
 
@@ -54,9 +91,14 @@ define(function(require, exports, module) {
 
                 //tabbing through items in the form should be disabled;
                 var $nav = this.nav
-                this.form.find('input,select,textarea').keydown(function (e) {
+                this.form.find(':input').keydown(function (e) {
                     if (e.which === 9 ) {
-                        $nav.find('.current').trigger('click');
+
+                        var next_step = $bkform.current_step  + 1;
+
+                        $bkform.current_step = next_step;
+                        $bkform.scrollTo(next_step)
+
                         return false;
                     }
                 });
@@ -77,7 +119,9 @@ define(function(require, exports, module) {
                     }
 
                     $bkform.current_step = next_step;
-                    $bkform.scrollTo(next_step);
+                    $bkform.scrollTo(next_step, false);
+
+                    console.log('dont validate');
 
                 });
 
@@ -116,7 +160,15 @@ define(function(require, exports, module) {
                 this.scrollTo(this.current_step);
 
             },
-            scrollTo: function(step){
+            scrollTo: function(step, validate){
+
+                validate = typeof validate !== 'undefined' ?  validate : true;
+
+                console.log("validate :"+validate);
+                console.log("scroll to "+step);
+
+                if (validate == true && !this.isValidPrevious(step - 1)) return;
+
                 //kill the current;
                 $('[data-target-step="'+ step +'"]').addClass("current").siblings().removeClass('current');
 
@@ -128,6 +180,34 @@ define(function(require, exports, module) {
                 this.holder.animate({scrollTop: scroll_to.position().top + 130 },'300','swing',function(){
                     //Do something when finished;
                 });
+            },
+            isValidPrevious: function( step ){
+
+                var $element = $(this.steps.eq(step)).find('[data-step="'+ step +'"]');
+
+                if($element.is(":input")) {
+
+                    console.log("validating step "+step);
+
+                    this.validator.element( $element );
+
+                    if(!$element.valid()){
+                        //Reset the current step to the previous step;
+                        this.current_step = step;
+
+                        $('[data-target-step="' + step + '"]').addClass("error");
+
+                        return false;
+                    } else {
+
+                        $('[data-target-step="' + step + '"]').removeClass("error");
+
+                    }
+                }
+
+                $('[data-target-step="' + step + '"]').addClass("completed");
+
+                return true;
             }
         };
 

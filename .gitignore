@@ -40,3 +40,4 @@ src/theme/vendor/bootstrap-validator/docs/assets/js/application.js
 src/theme/vendor/bootstrap-validator/docs/dist/validator.js
 src/theme/vendor/bootstrap-validator/docs/dist/validator.min.js
 src/theme/vendor/bootstrap-validator/js/validator.js
+src/theme/vendor/jquery-validation

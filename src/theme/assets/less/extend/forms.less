@@ -80,9 +80,9 @@ label {
         a {
           color: @turquoise;
           i{
-            &:before{
-              content: @ionicon-var-checkmark-circled;
-            }
+            //&:before{
+            //  content: @ionicon-var-checkmark-circled;
+            //}
           }
         }
       }
@@ -100,7 +100,7 @@ label {
       //}
       &.current{
         a{
-          color: @turquoise;
+          color: @brand-secondary;
           i {
             //font-size: 0;
             //margin: auto;
@@ -294,6 +294,7 @@ label {
     }
   }
 }
+
 
 
 /* @group Base */
@@ -587,6 +588,14 @@ label {
 }
 
 
+select.flat{
+  &~ .chosen-container{
+    padding: 0;
+    .chosen-choices{
+      border: none;
+    }
+  }
+}
 
 /* @end */
 /* @group Disabled Support */

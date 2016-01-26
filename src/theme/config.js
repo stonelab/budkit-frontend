@@ -21,7 +21,7 @@ requirejs.config({
     //"jquery.ghostdown": "vendor/ghost/jquery.ghostdown",
     // "jquery.fullcalendar": "vendor/fullcalendar/fullcalendar",
     "bootstrap": "vendor/bootstrap/dist/js/bootstrap.min",
-    "bootstrap.validator": "vendor/bootstrap-validator/dist/validator.min",
+    "jquery.validation": "vendor/jquery-validation/dist/jquery.validate.min",
     "flat-ui": "vendor/flat-ui/dist/js/flat-ui.min",
     //"bootstrap.typeahead": "vendor/bootstrap/typeahead",
     //"bootstrap.typeahead.addresspicker": "vendor/bootstrap/typeahead-addresspicker",
@@ -62,7 +62,7 @@ requirejs.config({
     //'jquery.scrollbar': ['jquery'],
     //'jquery.fullcalendar': ['jquery'],
     'bootstrap': ['jquery'],
-    'bootstrap.validator': ['jquery'],
+    'jquery.validation': ['jquery'],
     'flat-ui': ['jquery'],
     //'bootstrap.summernote': ['jquery'],
     "googlemaps":{
