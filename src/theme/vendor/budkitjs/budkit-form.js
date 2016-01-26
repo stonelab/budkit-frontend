@@ -21,106 +21,114 @@ define(function(require, exports, module) {
 
         var $ = window.jQuery,
             BKForm = function($form, options) {
-
-
                 //Events
-                var current_step = 0;
+                var $bkform = this;
+
+                this.current_step = 0;
 
                 this.options    = $.extend({},$.fn.bkform.defaults, options)
 
-                //this.components = $(this.options.components)
-                var $holder = $form.parents(this.options.form_holder).first(),
-                    $nav    = $form.find(this.options.form_navigator).first(),
-                    $first  = $form.find(this.options.form_first_step).first(),
-                    $last   = $form.find(this.options.form_last_step).last(),
-                    $steps  = $form.find(this.options.form_step)
+                this.form = $form,
+                this.holder = $form.parents(this.options.form_holder).first(),
+                this.nav    = $form.find(this.options.form_navigator).first(),
+                this.first  = $form.find(this.options.form_first_step).first(),
+                this.last   = $form.find(this.options.form_last_step).last(),
+                this.steps  = $form.find(this.options.form_step)
                 ;
 
-                var holder_height = $holder.height()
-                    ;
+                var holder_height = this.holder.height();
+
+
+                $.each(this.steps, function(i, step){
+                    //console.log(step);
+                    $(this).height( holder_height );
+                });
+
 
                 //Prepare the interface;
-                $holder.on('scroll touchmove mousewheel', function(e){
+                this.holder.on('scroll touchmove mousewheel', function(e){
                     e.preventDefault();
                     e.stopPropagation();
                     return false;
                 })
 
                 //tabbing through items in the form should be disabled;
-                $form.find('input,select,textarea').keydown(function (e) {
+                var $nav = this.nav
+                this.form.find('input,select,textarea').keydown(function (e) {
                     if (e.which === 9 ) {
                         $nav.find('.current').trigger('click');
                         return false;
                     }
                 });
 
-                $.each($steps, function(i, step){
-                    //console.log(step);
-                    $(this).height( holder_height );
-                });
 
                 //Lets navigate this form
+                var $holder = this.holder, $last = this.last;
                 $(document).on('click', '[data-target-step]' , function(){
                     var $li = $(this);
-                    var next_step = current_step;
+                    var next_step = $bkform.current_step;
 
                     if($li.hasClass("current")){
                         //simple to just pick the current step and iterate;
-                        next_step = current_step + 1;
+                        next_step = $bkform.current_step + 1;
 
                     }else{
                         next_step = parseInt( $li.data("target-step")  )
                     }
-                    console.log($li.data("target-step"));
-                    console.log(next_step);
 
-                    current_step = next_step;
+                    $bkform.current_step = next_step;
+                    $bkform.scrollTo(next_step);
 
-                    //alert(current_step);
-
-                    //kill the current;
-                    $('[data-target-step="'+ next_step +'"]').addClass("current").siblings().removeClass('current');
-
-                    //Scroll To;
-                    var scroll_to = ( $li.is(":last-child") ) ? $last : $('[data-form-step="'+ next_step +'"]').first();
-
-                    //$holder.removeClass("no-scroll");
-                    //$holder.scrollTo(scroll_to.offset().top - 100);
-                    $holder.animate({scrollTop: scroll_to.position().top + 130 },'500','swing',function(){
-                        //Do something when finished;
-                    });
                 });
 
                 //Navigation
+
+
                 $(document).on('click','[data-target-navigate]', function(){
 
                     var $btn = $(this);
-                    var next_step = current_step  + parseInt( $btn.data("target-navigate") );
+                    var next_step = $bkform.current_step  + parseInt( $btn.data("target-navigate") );
 
-                    console.log( parseInt( $btn.data("target-navigate") ));
+                    $bkform.current_step = next_step;
+                    $bkform.scrollTo(next_step)
+                });
 
 
-                    current_step = next_step;
 
-                    //kill the current;
-                    $('[data-target-step="'+ next_step +'"]').addClass("current").siblings().removeClass('current');
-
-                    //Scroll To;
-                    var scroll_to =  $('[data-form-step="'+ next_step +'"]').first();
-
-                    //$holder.removeClass("no-scroll");
-                    //$holder.scrollTo(scroll_to.offset().top - 100);
-                    $holder.animate({scrollTop: scroll_to.position().top + 130 },'500','swing',function(){
-                        //Do something when finished;
-                    });
-
-                })
+                $( window ).resize(function() {
+                    //$("#map").css("height", "100%");
+                    $bkform.refresh();
+                });
             };
 
         //Class Defintiion
         BKForm.prototype = {
             Constructor: BKForm,
+            refresh: function(){
 
+                var holder_height = this.holder.height();
+
+                $.each(this.steps, function(i, step){
+                    //console.log(step);
+                    $(this).height( holder_height );
+                });
+
+                this.scrollTo(this.current_step);
+
+            },
+            scrollTo: function(step){
+                //kill the current;
+                $('[data-target-step="'+ step +'"]').addClass("current").siblings().removeClass('current');
+
+                //Scroll To;
+                var scroll_to =  $('[data-form-step="'+ step +'"]').first();
+
+                //$holder.removeClass("no-scroll");
+                //$holder.scrollTo(scroll_to.offset().top - 100);
+                this.holder.animate({scrollTop: scroll_to.position().top + 130 },'300','swing',function(){
+                    //Do something when finished;
+                });
+            }
         };
 
 
