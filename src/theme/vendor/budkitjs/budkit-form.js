@@ -60,7 +60,6 @@ define(function(require, exports, module) {
                 });
 
                 //Lets navigate this form
-
                 $(document).on('click', '[data-target-step]' , function(){
                     var $li = $(this);
                     var next_step = current_step;
@@ -91,6 +90,31 @@ define(function(require, exports, module) {
                         //Do something when finished;
                     });
                 });
+
+                //Navigation
+                $(document).on('click','[data-target-navigate]', function(){
+
+                    var $btn = $(this);
+                    var next_step = current_step  + parseInt( $btn.data("target-navigate") );
+
+                    console.log( parseInt( $btn.data("target-navigate") ));
+
+
+                    current_step = next_step;
+
+                    //kill the current;
+                    $('[data-target-step="'+ next_step +'"]').addClass("current").siblings().removeClass('current');
+
+                    //Scroll To;
+                    var scroll_to =  $('[data-form-step="'+ next_step +'"]').first();
+
+                    //$holder.removeClass("no-scroll");
+                    //$holder.scrollTo(scroll_to.offset().top - 100);
+                    $holder.animate({scrollTop: scroll_to.position().top + 130 },'500','swing',function(){
+                        //Do something when finished;
+                    });
+
+                })
             };
 
         //Class Defintiion
