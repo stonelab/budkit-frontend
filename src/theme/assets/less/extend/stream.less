@@ -86,6 +86,7 @@
   list-style: none;
   li {
     position: relative;
+
     .more {
       padding: 10px;
       margin: 5px 0 0 0px;
@@ -105,7 +106,7 @@
     }
     .link, .item {
       text-decoration: none;
-      padding: @grid-gutter-width*0.5;
+      //padding: @grid-gutter-width*0.5;
       display: block;
       font-size: @font-size-base;
       min-height: 65px;
@@ -152,31 +153,24 @@
       }
     }
     .actions {
-      display: block;
-      .nav {
-        &.pull-left {
-          margin-left: -5px;
-        }
-        li {
-          display: inline-block;
-          border-bottom: none;
-          > a {
-            padding: 5px;
-            line-height: 1;
-            font-size: 1em;
-            display: inline-block;
-            color: gainsboro;
-            background: none;
-            > i {
-              font-size: @font-size-base * 1.3;
-              position: relative;
-              bottom: -2px;
-              margin-right: 3px;
-            }
-            &:hover {
-              color: @link-hover-color;
-            }
-          }
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0;
+      z-index: 1000;
+      button{
+        padding: 0;
+        background: none !important;
+      }
+      .dropdown-menu {
+        min-width: 100px;
+        max-width: 150px !important;
+        .border-radius(5px);
+        top: 0px;
+        right: 15px;
+        li > a{
+          padding: 5px 16px;
         }
       }
     }
@@ -218,6 +212,7 @@
       }
       .pins {
         margin-left: 5px;
+        margin-right: 20px;
         .label{
           //font-size: 100%;
           font-weight: 400;
@@ -248,9 +243,9 @@
       }
     }
     .stream-labels{
-      position: absolute;
-      left: 81px;
-      top: 20px;
+      position: relative;
+      left: -1px;
+      top: -7px;
       z-index: 1;
       .label{
         margin: 0 auto 5px;
@@ -267,7 +262,7 @@
         }
       }
       &~.stream-content{
-        padding-top: 50px;
+        padding: 50px 15px 0;
       }
     }
     .summary {
@@ -332,28 +327,7 @@
     &:last-child {
       border-bottom: none
     }
-    > .stream-list {
-      margin-left: 40px+@grid-gutter-width * (5/3);
-      position: relative;
-      //border-top: 1px solid #f7f7f7;
-      > .stream-line {
-        left: 39px
-      }
-      ul {
-        li {
-          .item, .link {
-            &.reading, &.writing {
-              background: #fcfcfd;
-            }
-          }
-          .content {
-            color: @concrete;
-          }
-          .featured-img, .featured-media, .step-number .cover-img {
-          }
-        }
-      }
-    }
+
     &.open {
       .holder {
         background: #fcfcfd;
@@ -370,7 +344,7 @@
     }
     .stream-content {
       position: relative;
-      padding: 0px;
+      padding: 15px;
       .featured-img, .featured-media, .cover-img{
         left: -(40px+ @grid-gutter-width*0.5);
         top: 0px;
@@ -772,13 +746,13 @@
     .stream-intro{
       //background-color: fade(@clouds, 20%);
       //padding: @grid-gutter-width;
-      font-size: 1.1em;
+      //font-size: 1.1em;
     }
 
     .stream-outro{
       //background-color: fade(@clouds, 20%);
      // padding: @grid-gutter-width;
-      font-size: 1.1em;
+      //font-size: 1.1em;
     }
 
     .stream-item{
@@ -860,10 +834,11 @@
       padding: 5px;
     }
     .stream-content {
-      margin: -@grid-gutter-width * 0.25 0 0;
+     // margin: -@grid-gutter-width * 0.25 0 0;
       padding: @grid-gutter-width * 0.6;
       background: white;
       border: 1px solid lighten(@clouds, 4%);
+      margin-bottom: @grid-gutter-width * 0.5;
 
       //&:before,&:after{
       //  content: "";

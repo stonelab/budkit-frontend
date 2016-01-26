@@ -49,7 +49,7 @@ label {
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 5px;
-  background: white;
+  background: lighten( @clouds, 5%);
   z-index: 10000;
 
   ul{
@@ -86,28 +86,28 @@ label {
           }
         }
       }
+      //&.current{
+      //  a{
+      //    border-radius: 50%;
+      //    width: 30px;
+      //    height: 30px;
+      //    padding: 0px;
+      //    text-align: center;
+      //    color: white;
+      //    display: inherit;
+      //    background: @turquoise;
+      //  }
+      //}
       &.current{
         a{
-          border-radius: 50%;
-          width: 60px;
-          height: 60px;
-          padding: 0px;
-          text-align: center;
-          color: white;
-          display: inherit;
-          background: @turquoise;
-        }
-      }
-      &.current{
-        a{
-          background: @turquoise;
+          color: @turquoise;
           i {
-            font-size: @font-size-base * 2.6;
-            margin: auto;
-            color: white;
-            &:before {
-              content: @ionicon-var-android-arrow-forward;
-            }
+            //font-size: 0;
+            //margin: auto;
+            //color: white;
+            //&:before {
+            //  content: @ionicon-var-android-arrow-forward;
+            //}
           }
         }
       }
@@ -117,13 +117,12 @@ label {
         }
         &.current{
           a {
-            color: white;
-            background: @alizarin;
-            i{
-              &:before {
-                content: @ionicon-var-android-close;
-              }
-            }
+            color:  @alizarin;
+            //i{
+            //  &:before {
+            //    content: @ionicon-var-android-close;
+            //  }
+            //}
           }
         }
       }
@@ -207,7 +206,7 @@ label {
       display: inline-block;
       padding: 10px 15px;
       font-size: @font-size-base ;
-      border: 1px solid transparent;
+      border: 2px solid transparent;
     }
     input[type=radio]{
 
@@ -225,7 +224,7 @@ label {
       &:checked{
         & ~ span{
           .btn.active;
-          border: 1px solid @brand-secondary;
+          border: 2px solid @brand-secondary;
           position:relative;
           &:after{
             &:extend(.ion);
@@ -250,7 +249,7 @@ label {
       &:hover:not(:disabled){
         & ~ span{
           background: darken(@btn-default-bg, 2%);
-          border: 1px solid @brand-secondary;
+          border: 2px solid @brand-secondary;
         }
       }
     }

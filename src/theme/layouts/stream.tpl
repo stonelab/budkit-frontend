@@ -14,13 +14,7 @@
                         <tpl:link rel="person" href="#" status="offline" src="/theme/assets/img/avatars/me.png"
                                   class="featured-img person" width="50" height="50"/>
 
-                        <div class="stream-labels">
-                            <span class="extra label label-warning">Task</span>
-                            <span class="extra label label-danger">Urgent</span>
-                            <span class="extra label label-info">Information</span>
-                            <span class="extra label label-success">Done</span>
-                            <span class="extra label label-default">Urgent</span>
-                        </div>
+
 
                         <div class="stream-content">
                             <h3 class="subject heading">
@@ -39,8 +33,39 @@
                                         </span>
                                     </a>
                                 </span>
+
+                                <div class="actions btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle btn-rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="ionicons ion-gear-b"/>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a tpl:href="/repository/${object_uri}/add" class="edit">
+                                                <span>Form</span>
+                                            </a>
+                                        </li>
+                                        <li role="separator" class="divider"></li>
+                                        <li>
+                                            <a tpl:href="/admin/repository/category/${object_uri}/edit" class="edit">
+                                                <span>Edit</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a tpl:href="/admin/repository/category/${object_uri}/delete" class="delete color-alizarin">
+                                                <span class="color-alizarin">Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </h3>
 
+                            <div class="stream-labels">
+                                <span class="extra label label-warning">Task</span>
+                                <span class="extra label label-danger">Urgent</span>
+                                <span class="extra label label-info">Information</span>
+                                <span class="extra label label-success">Done</span>
+                                <span class="extra label label-default">Urgent</span>
+                            </div>
 
                             <div class="summary">Good result for <a href="">@Hugh_Small</a> and <a
                                         href="">@wclgreens</a> in Westminster by election: nearly 10% of vote, more than
