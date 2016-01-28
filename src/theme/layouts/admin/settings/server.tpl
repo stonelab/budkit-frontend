@@ -9,7 +9,6 @@
                         <label class="control-label" for="options[mail][outgoing-handler]">Mail Handler</label>
                         <div class="controls">
                             <tpl:select name="options[mail][outgoing-handler]" class="form-control" selected="config://server.mail.outgoing-handler">
-                                <option value="mail">PHP Mail</option>
                                 <option value="sendmail">Send Mail</option>
                                 <option value="smtp">SMTP</option>
                             </tpl:select>
