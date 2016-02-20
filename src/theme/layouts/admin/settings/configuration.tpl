@@ -40,17 +40,17 @@
                         <div class="controls">
                             <label class="checkbox">
                                 <input type="hidden" name="options[site][registration]" value="0" />
-                                <tpl:input type="checkbox" name="options[site][registration]" value="1" data="config://setup.site.registration" />
+                                <input type="checkbox" name="options[site][registration]" value="1" tpl:checked="${if://config://setup.site.registration=1}" />
                                 <span>Allow new user registration?</span>
                             </label>
                             <label class="checkbox">
                                 <input type="hidden" name="options[site][inviteonly]" value="0" />
-                                <tpl:input type="checkbox" name="options[site][inviteonly]"  value="1" data="config://setup.site.inviteonly" />
+                                <input type="checkbox" name="options[site][inviteonly]"  value="1" tpl:checked="${if://config://setup.site.inviteonly=1}" />
                                 <span>New user registration by invite only.</span>
                             </label>
                             <label class="checkbox">
                                 <input type="hidden" name="options[site][verify-email]" value="0" />
-                                <tpl:input type="checkbox" name="options[site][verify-email]" value="1" data="config://setup.site.verify-email" />
+                                <input type="checkbox" name="options[site][verify-email]" value="1" tpl:checked="${if://config://setup.site.verify-email=1}" />
                                 <span>Verify newly registered user by email</span>
                             </label>
                         </div>
@@ -85,12 +85,12 @@
                         <div class="controls">
                             <label class="checkbox">
                                 <input type="hidden" name="options[site][url-suffix]" value="0" />
-                                <tpl:input type="checkbox" name="options[site][url-suffix]" data="config://setup.site.url-suffix" value="1" />
+                                <input type="checkbox" name="options[site][url-suffix]" tpl:checked="${if://config://setup.site.url-suffix=1}" value="1" />
                                 <span>Add output format suffix to URLs?</span>
                             </label>
                             <label class="checkbox">
                                 <input type="hidden" name="options[site][unicode-aliases]" value="0" />
-                                <tpl:input type="checkbox" name="options[site][unicode-aliases]" data="config://setup.site.unicode-aliases" value="1" />
+                                <input type="checkbox" name="options[site][unicode-aliases]" tpl:checked="${if://config://setup.site.unicode-aliases=1}" value="1" />
                                 <span>Use Unicode Aliasis.</span>
                             </label>
                         </div>

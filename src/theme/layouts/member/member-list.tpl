@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tpl:layout name="pages" xmlns:tpl="http://budkit.org/tpl">
-    <div class="col-md-12">
+    <div class="col-md-12 ptm">
         <div class="panel panel-list">
 
             <div class="panel-heading clearfix">
@@ -45,45 +45,43 @@
 
                             <th width="2%"></th>
                             <th width="3%"></th>
-                            <th width="35%">Title</th>
-                            <th>Created</th>
-                            <th>Author</th>
-                            <th width="18%">Permalink</th>
+                            <th width="25%">Name</th>
+                            <th></th>
+                            <th>Joined</th>
+
+                            <th width="25%">Permalink</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tpl:loop repeat="5">
+                        <tpl:loop foreach="members">
                             <tr>
                                 <td>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="page_uri[]" tpl:value="${object_uri}" />
+                                        <input type="checkbox" name="page_uri[]" tpl:value="${user_name_id}" />
                                     </label>
                                 </td>
                                 <td>
-                                    <tpl:link rel="person" href="#" status="offline" src="/theme/assets/img/avatars/me.png"
-                                              class="featured-img person" width="50" height="50"/>
+                                    <tpl:link rel="person" tpl:src="/file/${user_photo}/50x50" />
                                 </td>
                                 <td>
 
-                                    <a tpl:href="/page/${object_uri}">
-                                        <tpl:data value="media_title" />
+                                    <a tpl:href="/member/@${user_name_id}">
+                                        <span class="mrs"><tpl:data value="user_first_name" /></span>
+                                        <span><tpl:data value="user_last_name" /></span>
+                                        <tpl:condition on="user_verified" test="equals" is="verified">
+                                            <em class="ionicons ion-ios-checkmark color-success mls" title="verified" />
+                                        </tpl:condition>
                                     </a>
                                 </td>
-
-                                <td><tpl:datetime value="object_created_on" format="diff" /></td>
-
-                                <td><a tpl:href="/member/${media_owner.uri}">@<tpl:data value="media_owner.uri" /></a></td>
+                                <td><a tpl:href="/member/@${user_name_id}">@<tpl:data value="user_name_id" /></a></td>
                                 <td>
-                                    /page/<tpl:data value="object_uri" />
+                                    <tpl:datetime value="object_created_on" format="diff" /></td>
+                                <td>
+                                    /member/@<tpl:data value="user_name_id" />
                                 </td>
                                 <td>
-                                    <div class="btn-group btn-group-sm" role="group" aria-label="...">
-                                        <a tpl:href="/page/${object_uri}/edit" class="btn btn-default">Edit</a>
-                                        <a tpl:href="/page/${object_uri}/delete" class="btn btn-primary">Publish</a>
-                                        <a tpl:href="/page/${object_uri}/delete" class="btn btn-danger">Trash</a>
-
-                                    </div>
+                                    <a tpl:href="/admin/member/@${object_uri}/moderate" class="color-danger">Moderate</a>
                                 </td>
                             </tr>
                         </tpl:loop>

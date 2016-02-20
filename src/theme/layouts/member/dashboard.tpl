@@ -6,12 +6,8 @@
             <div class="container-navigation">
                 <tpl:import name="admin/navigation" />
             </div>
-            <div class="container-block prm plm scroll">
-                <div class="pls prs pbl">
-                    <div class="row">
-                        <tpl:block position="main" />
-                    </div>
-                </div>
+            <div class="container-block scroll">
+                 <tpl:block position="main" />
             </div>
         </div>
     </tpl:replace>

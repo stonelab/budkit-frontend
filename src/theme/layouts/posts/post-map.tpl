@@ -3,7 +3,7 @@
 
 
     <div class="container-main" role="main">
-        <div class="stream-map-ruler">
+       <!-- <div class="stream-map-ruler">
             <ul class="ruler">
                 <tpl:loop repeat="4">
                     <li class="major">Apr 2016</li>
@@ -43,6 +43,7 @@
                 <div class="label end">15 Apr 2016</div>
             </div>
         </div>
+        -->
         <div class="container-block stream-map">
             <div class="container-iside">
                 <div class="stream-grid container-block">

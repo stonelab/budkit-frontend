@@ -47,8 +47,8 @@
                             <th width="38%">Title</th>
                             <th>Created</th>
                             <th>Author</th>
-                            <th width="18%">Permalink</th>
-                            <th>Action</th>
+                            <th width="25%">Permalink</th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -63,20 +63,18 @@
                                     <a tpl:href="/page/${object_uri}">
                                         <tpl:data value="media_title" />
                                     </a>
+                                    <tpl:condition on="object_uri" test="equals" is="${config://setup.site.homepage}">
+                                        <em class="ionicons ion-earth color-warning mls" />
+                                    </tpl:condition>
                                 </td>
                                 <td><tpl:datetime value="object_created_on" format="diff" /></td>
 
                                 <td><a tpl:href="/member/${media_owner.uri}">@<tpl:data value="media_owner.uri" /></a></td>
                                 <td>
-                                    /page/<tpl:data value="object_uri" />
+                                    <div class="mts mbs">/page/<tpl:data value="object_uri" /> </div>
                                 </td>
                                 <td>
-                                    <div class="btn-group btn-group-sm" role="group" aria-label="...">
-                                        <a tpl:href="/page/${object_uri}/edit" class="btn btn-default">Edit</a>
-                                        <a tpl:href="/page/${object_uri}/delete" class="btn btn-primary">Publish</a>
-                                        <a tpl:href="/page/${object_uri}/delete" class="btn btn-danger">Trash</a>
-
-                                    </div>
+                                    <a tpl:href="/page/${object_uri}/edit" class="color-danger">Edit</a>
                                 </td>
                             </tr>
                         </tpl:loop>

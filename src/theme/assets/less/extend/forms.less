@@ -181,6 +181,9 @@ label {
     margin: 10px auto;
     text-align: center;
   }
+  .login-link{
+    color: inherit;
+  }
 }
 
 
@@ -673,6 +676,33 @@ select.flat{
 }
 .chosen-rtl.chosen-container-single.chosen-with-drop .chosen-single div b {
   background-position: -12px 2px;
+}
+
+
+[data-type='datepicker']{
+  select, .chosen-container{
+    width: 100% !important;
+  }
+  [data-type='datepicker-month']{
+  }
+}
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
+  }
 }
 
 

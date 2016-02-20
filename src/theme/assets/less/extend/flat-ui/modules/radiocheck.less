@@ -5,11 +5,12 @@
 .checkbox,
 .radio {
   margin-bottom: 12px;
-  padding-left: 32px;
+  padding-left: 25px;
   position: relative;
   transition: color .25s linear;
   font-size: ceil((@component-font-size-base * 0.933)); // ~14px
   line-height: 1.5; // 21px;
+  font-weight: normal;
 
   .icons {
     color: @input-border;
@@ -58,7 +59,7 @@
 }
 .checkbox {
   .icon-checked:before {
-    content: @ionicon-var-android-checkbox;
+    content: @ionicon-var-android-checkbox-outline;
   }
   .icon-unchecked:before {
     content: @ionicon-var-android-checkbox-outline-blank;
@@ -102,7 +103,7 @@
     }
 
     &:checked + .icons {
-      color: @brand-secondary;
+      color: @input-border-focus;
 
       .icon-unchecked {
         .opacity(0);
@@ -110,7 +111,7 @@
       .icon-checked {
         opacity: 1;
         filter: none;
-        color: @brand-secondary;
+        color: @input-border-focus;
       }
     }
 

@@ -41,3 +41,9 @@ src/theme/vendor/bootstrap-validator/docs/dist/validator.js
 src/theme/vendor/bootstrap-validator/docs/dist/validator.min.js
 src/theme/vendor/bootstrap-validator/js/validator.js
 src/theme/vendor/jquery-validation
+src/theme/vendor/blueimp-canvas-to-blob
+src/theme/vendor/blueimp-file-upload
+src/theme/vendor/blueimp-load-image
+src/theme/vendor/blueimp-tmpl
+src/theme/vendor/jquery.iframe-transport
+me.jpg

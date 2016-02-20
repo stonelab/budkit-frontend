@@ -5,7 +5,7 @@
     <!-- start: Mobile Specific -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!-- end: Mobile Specific -->
-    <link rel="shortcut icon" href="/theme/assets/img/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/theme/assets/img/favicon.ico" type="image/x-icon" />
     <link href="/theme/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="/theme/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="/theme/vendor/Ionicons/css/ionicons.min.css" rel="stylesheet"/>

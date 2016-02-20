@@ -7,243 +7,6 @@
 @import "panels";
 @import "icons";
 
-/** Backgrounds **/
-
-.background {
-  &-turquoise {
-    background-color: @turquoise;
-  }
-  &-green-sea {
-    background-color: @green-sea;
-  }
-  &-emerald {
-    background-color: @emerald;
-  }
-  &-nephritis {
-    background-color: @nephritis;
-  }
-  &-peter-river {
-    background-color: @peter-river;
-  }
-  &-belize-hole {
-    background-color: @belize-hole;
-  }
-  &-amethyst {
-    background-color: @amethyst;
-  }
-  &-wisteria {
-    background-color: @wisteria;
-  }
-  &-wet-asphalt {
-    background-color: @wet-asphalt;
-  }
-  &-midnight-blue {
-    background-color: @midnight-blue;
-  }
-  &-sun-flower {
-    background-color: @sun-flower;
-  }
-  &-orange {
-    background-color: @orange;
-  }
-  &-carrot {
-    background-color: @carrot;
-  }
-  &-pumpkin {
-    background-color: @pumpkin;
-  }
-  &-alizarin {
-    background-color: @alizarin;
-  }
-  &-pomegranate {
-    background-color: @pomegranate;
-  }
-  &-clouds {
-    background-color: @clouds;
-  }
-  &-silver {
-    background-color: @silver;
-  }
-  &-concrete {
-    background-color: @concrete;
-  }
-  &-asbestos {
-    background-color: @asbestos;
-  }
-  &-primary {
-    background-color: @brand-primary;
-  }
-  &-secondary {
-    background-color: @brand-secondary;
-  }
-  &-danger {
-    background-color: @state-danger-bg;
-  }
-  &-info {
-    background-color: @state-info-bg;
-  }
-  &-warning {
-    background-color: @state-warning-bg;
-  }
-  &-success {
-    background-color: @state-success-bg;
-  }
-  &-white {
-    background-color: white;
-  }
-}
-
-//Borders
-.border {
-  &-turquoise {
-    border-color: @turquoise;
-  }
-  &-green-sea {
-    border-color: @green-sea;
-  }
-  &-emerald {
-    border-color: @emerald;
-  }
-  &-nephritis {
-    border-color: @nephritis;
-  }
-  &-peter-river {
-    border-color: @peter-river;
-  }
-  &-belize-hole {
-    border-color: @belize-hole;
-  }
-  &-amethyst {
-    border-color: @amethyst;
-  }
-  &-wisteria {
-    border-color: @wisteria;
-  }
-  &-wet-asphalt {
-    border-color: @wet-asphalt;
-  }
-  &-midnight-blue {
-    border-color: @midnight-blue;
-  }
-  &-sun-flower {
-    border-color: @sun-flower;
-  }
-  &-orange {
-    border-color: @orange;
-  }
-  &-carrot {
-    border-color: @carrot;
-  }
-  &-pumpkin {
-    border-color: @pumpkin;
-  }
-  &-alizarin {
-    border-color: @alizarin;
-  }
-  &-pomegranate {
-    border-color: @pomegranate;
-  }
-  &-clouds {
-    border-color: @clouds;
-  }
-  &-silver {
-    border-color: @silver;
-  }
-  &-concrete {
-    border-color: @concrete;
-  }
-  &-asbestos {
-    border-color: @asbestos;
-  }
-}
-
-/**Colors**/
-.color {
-  &-error, &-urgent, &-Urgent{
-    color: @brand-danger;
-    font-weight: bold;
-  }
-  &-success, &-done,  &-Done{
-    color: @brand-success;
-    font-weight: bold;
-  }
-  &-info, &-information,&-Information{
-    color: @brand-info;
-    font-weight: bold;
-  }
-  &-warning, &-task,&-Task{
-    color: @brand-warning;
-    font-weight: bold;
-  }
-  &-danger{
-    color: @brand-danger;
-    font-weight: bold;
-  }
-
-  &-turquoise {
-    color: @turquoise;
-  }
-  &-green-sea {
-    color: @green-sea;
-  }
-  &-emerald {
-    color: @emerald;
-  }
-  &-nephritis {
-    color: @nephritis;
-  }
-  &-peter-river {
-    color: @peter-river;
-  }
-  &-belize-hole {
-    color: @belize-hole;
-  }
-  &-amethyst {
-    color: @amethyst;
-  }
-  &-wisteria {
-    color: @wisteria;
-  }
-  &-wet-asphalt {
-    color: @wet-asphalt;
-  }
-  &-midnight-blue {
-    color: @midnight-blue;
-  }
-  &-sun-flower {
-    color: @sun-flower;
-  }
-  &-orange {
-    color: @orange;
-  }
-  &-carrot {
-    color: @carrot;
-  }
-  &-pumpkin {
-    color: @pumpkin;
-  }
-  &-alizarin {
-    color: @alizarin;
-  }
-  &-pomegranate {
-    color: @pomegranate;
-  }
-  &-clouds {
-    color: @clouds;
-  }
-  &-silver {
-    color: @silver;
-  }
-  &-concrete {
-    color: @concrete;
-  }
-  &-asbestos {
-    color: @asbestos;
-  }
-  &-white {
-    color: white;
-  }
-}
 
 .label- {
   background-color: @wisteria;
@@ -346,11 +109,14 @@
       top: 40px;
     }
   }
-  &-side, &-main, &-aside, &-sside, &-iside, &-pside {
+  &-side, &-main, &-aside,&-saside,  &-sside, &-iside, &-pside {
     display: inline-block;
     position: relative;
     height: 100%;
     overflow: hidden;
+    &.relative{
+      position: relative !important;
+    }
   }
   &-side {
     width: @sidebar-width;
@@ -361,37 +127,37 @@
     }
   }
   &-sside {
-    width: 2.5 * @sidebar-width;
+    width: 2 * @sidebar-width;
     position: relative;
-    border-right: 1px solid @clouds;
+    //border-right: 1px solid @clouds;
     &:not(.hide) ~ .container-main {
-      margin-left: 2.5 * @sidebar-width;
+      margin-left: 2 * @sidebar-width;
     }
   }
   &-iside {
     width: 50%;
     position: absolute;
     left:0;
-    border-right: 1px solid @clouds;
+    //border-right: 1px solid @clouds;
     &:not(.hide) ~ .container-main {
       margin-left: 50%;
     }
   }
   &-pside {
-    width: 2 * @sidebar-width;
-    position: relative;
+    width:  (@sidebar-width * 1.25) - 1;
+    position: absolute;
     //right: 0; top:0; bottom:0;
-    border-right: 1px solid @clouds;
+    //border-right: 1px solid @clouds;
     &:not(.hide) ~ .container-main {
-      margin-left :  2 *  @sidebar-width;
+      margin-left :  (@sidebar-width * 1.25) - 1;
     }
   }
-  &-aside {
+  &-aside, &-saside {
     width: (@sidebar-width * 1.25) - 1;
     position: absolute;
     right: 0;
     //background: #FDFCFC;
-    border-left: 1px solid @clouds;
+    //border-left: 1px solid @clouds;
     &:not(.hide) ~ .container-main {
       margin-right: @sidebar-width * 1.25;
     }
@@ -400,6 +166,12 @@
       > .container-block{
         overflow: visible;
       }
+    }
+  }
+  &-saside {
+    width: (@sidebar-width * 2.5) - 1;
+    &:not(.hide) ~ .container-main {
+      margin-right: @sidebar-width * 2.5;
     }
   }
   &-main {
@@ -457,6 +229,12 @@
       & ~ .container-block{
         top: @navbar-height-large + 3px;
       }
+    }
+  }
+  &-profile-header{
+
+    &~.container-block{
+      top: 200px;
     }
   }
 }

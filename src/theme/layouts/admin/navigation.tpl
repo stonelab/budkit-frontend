@@ -9,12 +9,13 @@
     </div>
     <div class="navbar-collapse collapse navbar-inverse-collapse pln" role="navbar-collapse">
 
+        <!--
         <button class="navbar-btn btn btn-sm btn-default sidebar-toggle navbar-left"
                 data-switch="minimized"
                 data-target=".sidebar">
             <i class="fa fa-bars"></i>
         </button>
-
+        -->
         <span class="navbar-text navbar-text-title navbar-left"><tpl:data value="title" /></span>
 
         <form class="navbar-form navbar-right prs plm mll" action="#" role="search">
@@ -40,22 +41,6 @@
                     </li>
                 </tpl:loop>
             </tpl:condition>
-            <li>
-                <div class="btn-group navbar-btn mln mrm">
-                    <form class="" action="/post/create" method="get">
-                        <button type="submit" class="btn btn-sm btn-danger">New Post</button>
-                        <button data-toggle="dropdown" class="btn btn-sm btn-danger dropdown-toggle"><span
-                                    class="ionicons ion-more"></span></button>
-                        <ul class="dropdown-menu">
-                            <tpl:loop foreach="newactions">
-                                <li><a tpl:href="${link}">
-                                        <tpl:data value="title"/>
-                                    </a></li>
-                            </tpl:loop>
-                        </ul>
-                    </form>
-                </div>
-            </li>
         </ul>
 
     </div>

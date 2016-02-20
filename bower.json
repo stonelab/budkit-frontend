@@ -37,6 +37,8 @@
     "polymer": "Polymer/polymer#^1.2.0",
     "html5shiv": "~3.7.3",
     "html5formshim": "~2.3.1",
-    "jquery-validation": "~1.14.0"
+    "jquery-validation": "~1.14.0",
+    "blueimp-file-upload": "~9.11.2",
+    "jquery.iframe-transport": "^1.0.0"
   }
 }
