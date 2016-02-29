@@ -46,6 +46,26 @@
         -->
         <div class="container-block stream-map">
             <div class="container-iside">
+                <div class="stream-map-tools">
+                    <tpl:import name="/posts/post-map-tools" />
+                </div>
+                <div id="map" class="container-block no-scroll"></div>
+                <script type="text/javascript">
+                    require(['config'], function(){
+                        require.config({
+                            googlemaps: {
+                                params: {
+                                    key: 'AIzaSyBZrzwMucdDb547ZrUkWrhkIChoNJfAC88',
+                                    libraries: 'places'
+                                }
+                            }
+                        });
+                        require(['budkit.map'])
+                    });
+                </script>
+            </div>
+            <div class="container-main">
+
                 <div class="stream-grid container-block">
                     <div class="stream-line"/>
                     <ul class="stream">
@@ -120,25 +140,9 @@
                         </tpl:loop>
                     </ul>
                 </div>
-            </div>
-            <div class="container-main">
-                <div class="stream-map-tools">
-                    <tpl:import name="/posts/post-map-tools" />
-                </div>
-                <div id="map" class="container-block no-scroll"></div>
-                <script type="text/javascript">
-                    require(['config'], function(){
-                        require.config({
-                            googlemaps: {
-                                params: {
-                                    key: 'AIzaSyBZrzwMucdDb547ZrUkWrhkIChoNJfAC88',
-                                    libraries: 'places'
-                                }
-                            }
-                        });
-                        require(['budkit.map'])
-                    });
-                </script>
+
+
+
             </div>
         </div>
     </div>

@@ -5,7 +5,7 @@
             <!--/.col-md-6-->
             <div class="col-md-8">
                 <div class="input-group">
-                    <input type="text" class="form-control  places-search" id="location" placeholder="Location"/>
+                    <input type="text" class="form-control" data-autocomplete="true" id="location" placeholder="Location"/>
                     <!--<span class="input-group-addon background-white">
                         <select class="native">
                             <option>Category</option>

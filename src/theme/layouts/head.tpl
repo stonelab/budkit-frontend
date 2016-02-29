@@ -15,5 +15,6 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/theme/assets/js/vendor/flat-ui/respond.min.js"></script>
     <![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <tpl:import name="scripts" />
 </tpl:layout>

@@ -2,7 +2,7 @@
  * Created by livingstonefultang on 18/09/15.
  */
 
-require(["jquery", "typeahead.addresspicker", "gmaps"], function($, AddressPicker, GMaps) {
+define(["jquery", "gmaps"], function($, GMaps) {
 
     var gmap;
 
@@ -41,7 +41,7 @@ require(["jquery", "typeahead.addresspicker", "gmaps"], function($, AddressPicke
     }, {
         "featureType": "road",
         "elementType": "labels",
-        "stylers": [{"visibility": "off"}]
+        "stylers": [{"visibility": "on"}]
     }, {
         "featureType": "road.highway",
         "elementType": "geometry.fill",
@@ -115,17 +115,6 @@ require(["jquery", "typeahead.addresspicker", "gmaps"], function($, AddressPicke
             markers.push(marker);
         }
 
-        var addressPicker = new AddressPicker();
-
-        $('.places-search').typeahead(null, {
-            displayKey: 'description',
-            source: addressPicker.ttAdapter()
-        });
-
-        addressPicker.bindDefaultTypeaheadEvent($('.places-search'));
-        $(addressPicker).on('addresspicker:selected', function (event, result) {
-            gmap.setCenter(result.lat(), result.lng());
-        });
     });
 
     $( window ).resize(function() {
@@ -133,5 +122,5 @@ require(["jquery", "typeahead.addresspicker", "gmaps"], function($, AddressPicke
         gmap.refresh();
     });
 
-
+    return gmap;
 });

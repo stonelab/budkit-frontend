@@ -7,22 +7,23 @@
             <div class="stream-content">
                 <h3 class="subject heading">
 
-
                     <tpl:link rel="person" tpl:name="${edgeData.story_author.user_first_name} ${edgeData.story_author.user_last_name}"
-                              status="offline"
-                              tpl:href="/member/@${edgeData.story_author.user_name_id}"
+                             tpl:href="/member/@${edgeData.story_author.user_name_id}"
                               class="person"
                     />
-
-                    <a href="/member/timeline/1AgdAGAEgsd" class="time">
+                    <a tpl:href="/member/timeline/${edgeData.object_uri}" class="time">
                         <span class="label label-time"><tpl:datetime value="edgeData.object_created_on" format="diff" /> </span>
                     </a>
-                    <span class="stream-activity">
-                        <span class="story"> approved a <a href="#">new Host</a></span>
-                    </span>
-                    <tpl:import name="posts/post-actions" />
+                    <tpl:condition on="edgeData.story_object" test="empty" is="0">
+                        <span class="stream-activity">
+                            <span class="story"><span class="pls prs"><tpl:data value="edgeData.story_object.prefix" /></span><a tpl:href="${edgeData.story_object.url}"><tpl:data value="edgeData.story_object.type" /></a></span>
+                        </span>
+                    </tpl:condition>
                 </h3>
-                <div class="stream-media">
+                <tpl:import name="posts/post-actions" />
+
+                    <div class="stream-media">
+                        <tpl:condition on="edgeData.story_figure" test="empty" is="1">
                     <figure>
                         <ul class="media-grid media-gallery compensate-margins">
                             <li class="media-grid-fluid">
@@ -92,7 +93,9 @@
                             </p>
                         </figcaption>
                     </figure>
+                        </tpl:condition>
                 </div>
+
             </div>
         </div>
     </div>

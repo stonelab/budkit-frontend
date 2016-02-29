@@ -7,18 +7,18 @@
         </button>
         <ul class="dropdown-menu pull-right">
             <li>
-                <a tpl:href="#" class="edit">
+                <a href="#" class="edit">
                     <span>Edit post</span>
                 </a>
             </li>
             <li role="separator" class="divider"></li>
             <li>
-                <a tpl:href="#" class="edit">
+                <a href="#" class="edit">
                     <span>Add label</span>
                 </a>
             </li>
             <li>
-                <a tpl:href="#" class="delete color-alizarin">
+                <a href="#" class="delete color-alizarin">
                     <span class="color-alizarin">Delete post</span>
                 </a>
             </li>

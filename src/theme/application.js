@@ -1,7 +1,7 @@
 /**
  * Created by livingstonefultang on 10/27/13.
  */
-require(["jquery","jquery.cookie", "chosen","bootstrap","flat-ui", "html5formshim"], function() {
+require(["jquery","jquery.cookie", "chosen","bootstrap","flat-ui"], function() {
 
     var activeTabs = {};
 
@@ -11,6 +11,25 @@ require(["jquery","jquery.cookie", "chosen","bootstrap","flat-ui", "html5formshi
             // ... do stuff
         });
     }
+
+    //file upload
+    $('input[data-multiple-caption]').each(function(index, el){
+        var label	 = $(el).next('label'),
+            labelVal = label.text();
+
+        $(el).on( 'change', function( e ){
+            var fileName = '';
+            if( el.files && el.files.length > 1 )
+                fileName = ( $(el).data( 'multiple-caption' ) || '' ).replace( '{count}', el.files.length );
+            else
+                fileName = e.target.value.split( '\\' ).pop();
+
+            if( fileName )
+                label.text( fileName );
+            else
+                label.text( labelVal );
+        });
+    });
 
     if($.cookie("activeTabs")){
         activeTabs = JSON.parse($.cookie("activeTabs"));

@@ -228,3 +228,45 @@ html, body {
     background: @silver;
   }
 }
+
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+.table-overflow{
+  > thead,
+  > tbody{
+    > tr {
+      th, td {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.table-bordered-internal {
+  border-top: 1px solid @clouds;
+  border-bottom: 1px solid @clouds;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      th,
+      td {
+        border: 1px solid @clouds;
+        &:first-of-type{
+          border-left: none;
+        }
+        &:last-of-type{
+          border-right: none;
+        }
+      }
+    }
+  }
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width: 2px;
+    }
+  }
+}

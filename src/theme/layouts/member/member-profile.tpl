@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tpl:layout xmlns:tpl="http://budkit.org/tpl" extends="index">
     <tpl:remove path="//div[@role='aside']" />
-    <tpl:remove path="//div[@role='side']"/>
+    <!--<tpl:remove path="//div[@role='side']"/> -->
     <tpl:replace path="//div[@role='main']">
         <div class="container-main admin" role="main">
             <div class="container-navigation">
@@ -51,19 +51,13 @@
                                         <a tpl:href="http://www.twitter.com/${user.user_twitter_uid}">@<tpl:data value="user.user_twitter_uid" /></a>
                                     </div>
                                 </tpl:condition>
-                                <tpl:condition on="user.user_facebook_uid" test="empty" is="0">
-                                    <div class="profile-desc-link">
-                                        <i class="fa fa-facebook"></i>
-                                        <a href="http://www.facebook.com/${user.user_facebook_uid}"><tpl:data value="user.user_facebook_uid" /></a>
-                                    </div>
-                                </tpl:condition>
                             </div>
                         </div>
 
 
                         <div class="container-aside sidestream" role="stream"> </div>
 
-                        <div class="container-main relative stream-list-content background-white border-clouds border-left border-top border-right" role="main">
+                        <div class="container-main relative stream-list-content background-white border-clouds border-left border-top border-right border-bottom" role="main">
 
                                 <div class="profile-title">
                                     <h1 class="name">

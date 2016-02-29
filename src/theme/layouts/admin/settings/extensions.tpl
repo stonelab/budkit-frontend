@@ -1,7 +1,7 @@
 <tpl:layout xmlns="http://www.w3.org/1999/xhtml" xmlns:tpl="http://budkit.org/tpl">
     <div class="padding ptm">
         <div class="clearfix">
-            <form class="pull-right input-prepend">   
+            <form class="pull-right input-prepend">
                 <i class="icon-search add-on"></i>
                 <input type="text" class="search-query span2" placeholder="Search for extensions" />
             </form>
@@ -17,7 +17,7 @@
                     <thead>
                         <tr>
                             <th class="span1">Icon</th>
-                            <th class="span2">Name</th>    
+                            <th class="span2">Name</th>
                             <th class="span2">Rating</th>
                             <th class="span5">Description</th>
                             <th class="span1">Version</th>
@@ -27,7 +27,7 @@
                     <tbody>
                         <tr>
                             <td><img src="http://placehold.it/50x50/eeeeee" class="thumbnail" /></td>
-                            <td><strong>Campus</strong><span class="help-block">By Livingstone Fultang</span></td>  
+                            <td><strong>Campus</strong><span class="help-block">By Livingstone Fultang</span></td>
                             <td>
                                 <span class="rating">
                                     <span class="star"></span><span class="star"></span><span class="star active"></span><span class="star"></span><span class="star"></span>
@@ -41,7 +41,7 @@
                         <?php for ($i = 0; $i < 2; $i++): ?>
                         <tr>
                             <td><img src="http://placehold.it/50x50/eeeeee" class="thumbnail" /></td>
-                            <td><strong>Campus</strong><span class="help-block">By Livingstone Fultang</span></td>  
+                            <td><strong>Campus</strong><span class="help-block">By Livingstone Fultang</span></td>
                             <td>
                                 <span class="rating">
                                     <span class="star"></span><span class="star"></span><span class="star active"></span><span class="star"></span><span class="star"></span>
@@ -55,7 +55,7 @@
                         <?php endfor; ?>
                         <tr class="warning">
                             <td><img src="http://placehold.it/50x50/eeeeee" class="thumbnail" /></td>
-                            <td><strong>Campus</strong><span class="help-block">By Livingstone Fultang</span></td>  
+                            <td><strong>Campus</strong><span class="help-block">By Livingstone Fultang</span></td>
                             <td>
                                 <span class="rating">
                                     <span class="star"></span><span class="star"></span><span class="star active"></span><span class="star"></span><span class="star"></span>
@@ -69,7 +69,7 @@
                         <?php for ($i = 0; $i < 2; $i++): ?>
                         <tr>
                             <td><img src="http://placehold.it/50x50/eeeeee" class="thumbnail" /></td>
-                            <td><strong>Campus</strong><span class="help-block">By Livingstone Fultang</span></td>  
+                            <td><strong>Campus</strong><span class="help-block">By Livingstone Fultang</span></td>
                             <td>
                                 <span class="rating">
                                     <span class="star"></span><span class="star"></span><span class="star active"></span><span class="star"></span><span class="star"></span>
@@ -83,7 +83,7 @@
                         <?php endfor; ?>
                         <tr>
                             <td><img src="http://placehold.it/50x50/eeeeee" class="thumbnail" /></td>
-                            <td><strong>Campus</strong><span class="help-block">By Livingstone Fultang</span></td>  
+                            <td><strong>Campus</strong><span class="help-block">By Livingstone Fultang</span></td>
                             <td>
                                 <span class="rating">
                                     <span class="star"></span><span class="star"></span><span class="star active"></span><span class="star"></span><span class="star"></span>
@@ -96,7 +96,7 @@
                         </tr>
                         <tr>
                             <td><img src="http://placehold.it/50x50/eeeeee" class="thumbnail" /></td>
-                            <td><strong>Campus</strong><span class="help-block">By Livingstone Fultang</span></td>  
+                            <td><strong>Campus</strong><span class="help-block">By Livingstone Fultang</span></td>
                             <td>
                                 <span class="rating">
                                     <span class="star"></span><span class="star"></span><span class="star active"></span><span class="star"></span><span class="star"></span>
@@ -109,7 +109,7 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>            
+            </div>
         </div>
         <tpl:import layout="pagination" />
     </div>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tpl:layout xmlns:tpl="http://budkit.org/tpl" name="index">
-    <!--[if lt IE 7]>     <html class="ie lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-    <!--[if IE 7]>        <html class="ie lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
-    <!--[if IE 8]>        <html class="ie lt-ie10 lt-ie9"> <![endif]-->
-    <!--[if IE 9]>        <html class="ie lt-ie10><![endif]-->
-    <!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+    <!--[if lt IE 7]>     <html class="ie lt-ie10 lt-ie9 lt-ie8 lt-ie7 no-js"> <![endif]-->
+    <!--[if IE 7]>        <html class="ie lt-ie10 lt-ie9 lt-ie8 no-js"> <![endif]-->
+    <!--[if IE 8]>        <html class="ie lt-ie10 lt-ie9 no-js"> <![endif]-->
+    <!--[if IE 9]>        <html class="ie lt-ie10 no-js"><![endif]-->
+    <!--[if !IE]><!--><html lang="en" class="no-js"><!--<![endif]-->
         <head><tpl:import name="head" /> </head>
         <body tpl:class="${page.body.class}">
             <div class="container-alert">

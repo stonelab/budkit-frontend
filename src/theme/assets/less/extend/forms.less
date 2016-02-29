@@ -284,11 +284,11 @@ label {
 .custom-fields-holder{
 
   .placeholder{
-    border: 2px dashed @clouds;
+    border: 2px dashed @concrete;
     height: 55px;
     text-align: center;
     line-height: 50px;
-    color: @clouds;
+    color: @concrete;
     margin: @grid-gutter-width * 0.5;
     display: none;
     //only show the placeholder when its the only childelement
@@ -687,22 +687,34 @@ select.flat{
   }
 }
 
-.fileinput-button {
+
+.js .file-upload {
+
   position: relative;
-  overflow: hidden;
-  display: inline-block;
 
-  input {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
+  input[type='file']{
+
     opacity: 0;
-    -ms-filter: 'alpha(opacity=0)';
-    font-size: 200px;
-    direction: ltr;
+    overflow: hidden;
+    position: absolute;
+    left:0; right:0; top:0; bottom:0;
     cursor: pointer;
+
+    &~label:first-of-type{
+      max-width: 80%;
+      font-size: @font-size-h4;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+      display: inline-block;
+      overflow: hidden;
+      padding: 0.625rem 0;
+      color: @brand-secondary;
+    }
   }
+
 }
-
-
+.no-js .inputfile ~ label:first-child {
+  display:none;
+}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tpl:layout xmlns:tpl="http://budkit.org/tpl">
 
-    <div class="container-saside sidestream border-left border-clouds" role="stream">
+    <div class="container-iside sidestream border-left border-clouds" role="stream">
         <!--<div class="container-heading">
             Activity
         </div>

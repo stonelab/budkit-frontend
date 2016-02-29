@@ -11,7 +11,7 @@
                 <a class="navbar-brand ptn pln" href="/" role="navbar-brand"><img src="/theme/assets/img/logo-dark-full.png" height="44" /></a>
             </div>
             <div class="navbar-collapse collapse navbar-inverse-collapse" role="navbar-collapse">
-                <tpl:menu uid="mediamenu" class="nav navbar-nav navbar-right" />
+                <tpl:menu uid="pagemenu" class="nav navbar-nav navbar-right" />
             </div>
         </div>
     </div>

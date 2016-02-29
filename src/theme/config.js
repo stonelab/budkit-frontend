@@ -47,7 +47,7 @@ requirejs.config({
     //"google.prettify":"//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify",
 
     "html5shiv":"vendor/html5shiv/dist/html5shiv.min",
-    "html5formshim":"vendor/html5formshim/build/jquery.html5form.min"
+    //"html5formshim":"vendor/html5formshim/build/jquery.html5form.min"
     //
     //"bootstrap.summernote.highlight":"vendor/summernote/summernote-ext-highlight"
   },
@@ -81,10 +81,10 @@ requirejs.config({
     //  deps: ["when"]
     //}
     "typeahead.addresspicker":{
-      deps: ["jquery", "typeahead"],
+      deps: ['bootstrap'],
       exports: "AddressPicker"
     },
-    "html5formshim":["jquery"],
+    //"html5formshim":["jquery"],
 
     ////'jquery.budkit': ['jquery'],
     ////'jquery.validate': ['jquery'],
@@ -101,6 +101,9 @@ requirejs.config({
       deps: ['jquery', 'jquery.ui'],
       exports: "BKForm"
     },
-    'budkit.map': ['jquery']
+    'budkit.map': {
+      deps:['jquery'],
+      exports: "GMaps"
+    }
   }
 });

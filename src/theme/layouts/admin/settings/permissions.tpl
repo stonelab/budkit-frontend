@@ -1,5 +1,41 @@
 <tpl:layout xmlns="http://www.w3.org/1999/xhtml" xmlns:tpl="http://budkit.org/tpl">
-    <div class="col-md-9 ptm">
+    <div class="col-md-12 ptm">
+        <div class="panel panel-fieldset">
+            <div class="panel-heading">
+                <div class="panel-title">Add group</div>
+            </div>
+
+            <div class="panel-body">
+                <form action="/settings/system/permissions/authorities/edit" method="POST"  class="row">
+                    <div class="form-group  col-md-5 mbn">
+                        <label class="sr-only">Group Name</label>
+                        <input type="text" name="authority-title" class="form-control" placeholder="Group Name" />
+                    </div>
+
+                    <div class="form-group col-md-5 pln prn mbn">
+
+                        <label class="sr-only">Parent Group</label>
+                        <select name="authority-parent" id="authority-parent" class="form-control">
+                            <option value="">Select Parent</option>
+                            <tpl:loop foreach="authorities" id="authorities">
+                                <option tpl:value="${authority_id}">
+                                    <tpl:loop limitby="indent"> -- </tpl:loop>
+                                    <span><tpl:data value="authority_title" /></span>
+                                </option>
+                            </tpl:loop>
+                        </select>
+
+                    </div>
+                    <div class="form-group col-md-2 mbn">
+                        <input type="hidden" name="authority-description" />
+                        <button type="submit" class="btn btn-default btn-block">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 ptm">
         <div class="panel-group condensed" id="authority-group-collapse">
 
             <tpl:loop foreach="authorities" id="authority-groups">
@@ -71,40 +107,6 @@
                     </div>
                 </div>
             </tpl:loop>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="panel">
-            <div class="panel-heading">
-                <div class="panel-title">Add New Group</div>
-            </div>
-            <form action="/settings/system/permissions/authorities/edit" method="POST">
-            <div class="panel-body">
-                <div class="form-group">
-                    <label>Group Name</label>
-                    <input type="text" name="authority-title" class="form-control" placeholder="Group Name" />
-                </div>
-
-                <div class="form-group">
-
-                    <label>Parent Group</label>
-                    <select name="authority-parent" id="authority-parent" class="form-control">
-                        <option value="">Select Parent</option>
-                        <tpl:loop foreach="authorities" id="authorities">
-                            <option tpl:value="${authority_id}">
-                                <tpl:loop limit="indent"><span class="indenter">|--</span></tpl:loop>
-                                <span><tpl:data value="authority_title" /></span>
-                            </option>
-                        </tpl:loop>
-                    </select>
-
-                </div>
-            </div>
-                <div class="panel-footer">
-                    <input type="hidden" name="authority-description" />
-                    <button type="submit" class="btn btn-primary btn-block">Add New Group</button>
-                </div>
-            </form>
         </div>
     </div>
 

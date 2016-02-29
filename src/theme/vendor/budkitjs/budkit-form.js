@@ -41,6 +41,8 @@ define(["jquery","jquery.validation"], function(require, exports, module) {
                 //The on submite event;
                 this.form.submit (function(event){
 
+                    //alert('this');
+
                     //Force validate the entire form;
 
                     //validator.form();
@@ -93,7 +95,6 @@ define(["jquery","jquery.validation"], function(require, exports, module) {
                 var $nav = this.nav
                 this.form.find(':input').keydown(function (e) {
                     if (e.which === 9 ) {
-
                         var next_step = $bkform.current_step  + 1;
 
                         $bkform.current_step = next_step;
@@ -106,7 +107,7 @@ define(["jquery","jquery.validation"], function(require, exports, module) {
 
                 //Lets navigate this form
                 var $holder = this.holder, $last = this.last;
-                $(document).on('click', '[data-target-step]' , function(){
+                $('[data-target-step]').on('click' , function(){
                     var $li = $(this);
                     var next_step = $bkform.current_step;
 
@@ -128,7 +129,7 @@ define(["jquery","jquery.validation"], function(require, exports, module) {
                 //Navigation
 
 
-                $(document).on('click','[data-target-navigate]', function(){
+                $('[data-target-navigate]').on('click', function(){
 
                     var $btn = $(this);
                     var next_step = $bkform.current_step  + parseInt( $btn.data("target-navigate") );
@@ -166,6 +167,8 @@ define(["jquery","jquery.validation"], function(require, exports, module) {
 
                 console.log("validate :"+validate);
                 console.log("scroll to "+step);
+
+                console.trace();
 
                 if (validate == true && !this.isValidPrevious(step - 1)) return;
 
