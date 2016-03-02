@@ -23,7 +23,7 @@
                 <tpl:import name="posts/post-actions" />
 
                     <div class="stream-media">
-                        <tpl:condition on="edgeData.story_figure" test="empty" is="1">
+                        <tpl:condition on="edgeData.story_figure" test="empty" is="0">
                     <figure>
                         <ul class="media-grid media-gallery compensate-margins">
                             <li class="media-grid-fluid">

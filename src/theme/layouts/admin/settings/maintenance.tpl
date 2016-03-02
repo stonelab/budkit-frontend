@@ -2,48 +2,48 @@
     <div class="col-md-12 ptm">
     <div class="panel">
         <div class="panel-body">
-            <form class="form-vertical col-md-12 col-sm-12 col-lg-8">
+            <form class="form-vertical">
+                <p class="color-alizarin">WARNING: All actions on this page are irreversible. Thread wisely</p>
                 <div class="form-group">
-
                     <div class="controls">
-
+                        <span class="margin-top-half"><strong>Perform a system check</strong></span>
                         <span class="help-block">It is important that you keep your site healthy.</span>
-                        <p class="margin-top-half"><strong>Performing a system check will..</strong></p>
-                        <ol class="help-block margin-top-half">
+
+                        <ol>
                             <li>Check for new versions of the platform as well as installed extensions</li>
                             <li>Clear the <em>/downloads</em> folder.</li>
                             <li>Check for any database inconsistencies</li>
                         </ol>
-                        <a href="/settings/system/maintenance/check" class="btn btn-success margin-top-half" >Check Now</a>
+                        <a href="/settings/system/maintenance/check" class="btn btn-danger" >Check Now</a>
                     </div>
                 </div>
                 <hr />
                 <div class="form-group">
 
                     <div class="controls">
+                        <span class="margin-top-half"><strong>Close all sessions</strong></span>
                         <span class="help-block">Use this if for some reasons you want to clear all sessions on the system...</span>
-                        <p class="margin-top-half"><strong>Closing all sessions will</strong></p>
-                        <ol class="help-block margin-top-half">
+
+                        <ol>
                             <li>Delete all enteries in the sessions table</li>
                             <li>Force all user's to sign in again</li>
                             <li>You will be logged out</li>
                         </ol>
-                        <a href="/settings/system/maintenance/purge" class="btn btn-danger margin-top-half" >End All Sessions</a>
+                        <a href="/settings/system/maintenance/purge" class="btn btn-danger" >End All Sessions</a>
                     </div>
                 </div>
                 <hr />
                 <div class="form-group">
 
                     <div class="controls">
-                        <p class="margin-top-quater"><strong>To Manually Reset...</strong></p>
-                        <ol class="help-block">
+                        <span class="margin-top-quater"><strong>Factory Reset</strong></span>
+                        <span class="help-block">To manually reset your site to factor settings, do the following. Alternatively click the reset button below.</span>
+                        <ol>
                             <li>Rename the setup.ini file in your config folder to setup.ini.old</li>
-                            <li>Delete your database manually if required. BK won't delete it for you</li>
+                            <li>Delete your database manually if required.</li>
                             <li>Delete the contents of the <em>/users</em> folder.</li>
                         </ol>
-                        <p class="margin-top-half"><strong>Are you sure you want to do this?</strong></p>
-                        <p class="help-block">If you are then click the button below. There will be no undo button</p>
-                        <a href="/settings/system/maintenance/reset" class="btn btn-danger margin-top-half" >Factory Reset</a>
+                        <a href="/settings/system/maintenance/reset" class="btn btn-danger" >Factory Reset</a>
                     </div>
                 </div>
             </form>

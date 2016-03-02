@@ -17,7 +17,7 @@
  * limitations under the License.
  * ========================================================== */
 "use strict"
-define(function(require, exports, module) {
+define(['jquery', 'jquery.ui'], function(require, exports, module) {
 
         var $ = window.jQuery,
             $defaults = {

@@ -1,7 +1,7 @@
 /**
  * Created by livingstonefultang on 10/27/13.
  */
-require(["jquery","jquery.cookie", "chosen","bootstrap","flat-ui"], function() {
+define(["jquery","jquery.cookie", "chosen", "bootstrap","flat-ui"], function() {
 
     var activeTabs = {};
 
@@ -12,6 +12,18 @@ require(["jquery","jquery.cookie", "chosen","bootstrap","flat-ui"], function() {
         });
     }
 
+    //Links to be displayed in a modal box
+    $('.modal-response').on("click", function(ev){
+        ev.preventDefault();
+        var target = $(this).find('a').first().attr("href");
+
+        console.log(target);
+        console.log($(".modal[role=dialog]"));
+        // load the url and show modal on success
+        $(".modal[role=dialog]  .modal-body").load(target, function() {
+            $(".modal[role=dialog]").modal("show");
+        });
+    })
     //file upload
     $('input[data-multiple-caption]').each(function(index, el){
         var label	 = $(el).next('label'),

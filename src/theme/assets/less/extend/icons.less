@@ -3,6 +3,10 @@
 
 @budkit-icon-prefix: icon;
 
+.menu-icon:before{
+  content: @ionicon-var-cube;
+}
+
 .@{budkit-icon-prefix}-emails:before,
 .@{budkit-icon-prefix}android-drafts:before { content: @ionicon-var-android-drafts; }
 
@@ -45,7 +49,7 @@
 .@{budkit-icon-prefix}-urgent{ color: @brand-danger }
 .@{budkit-icon-prefix}-done{ color: @brand-success }
 
-.@{budkit-icon-prefix}-more-filters:before,
+.@{budkit-icon-prefix}-more:before,
 .@{budkit-icon-prefix}android-add-circle:before { content: @ionicon-var-android-add-circle; }
 
 .@{budkit-icon-prefix}-extensions:before,

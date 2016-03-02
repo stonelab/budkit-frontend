@@ -33,7 +33,7 @@
                             <a tpl:href="/settings/system/permissions/authority/${menu_group_id}"><span><tpl:data value="menu_group_title" /></span></a>
                             <span class="ionicon ion-minus-round color-silver mrs mls"></span>
                             <span class="color-silver">uid: <tpl:data value="menu_group_uid" /></span>
-                            <a tpl:href="/settings/system/permissions/authority/edit/${menu_group_id}"><span class="pull-right"><i class="fa fa-cog"></i></span></a>
+                            <a href="#"><span class="pull-right"><i class="fa fa-cog"></i></span></a>
                         </div>
                     </div>
                     <div tpl:id="group${menu_group_id}" class="panel-collapse collapse">

@@ -10,5 +10,7 @@
                 <tpl:block position="main" />
             </div>
         </div>
+        <!-- // Just once // -->
+        <tpl:import name="modal" />
     </tpl:replace>
 </tpl:layout>

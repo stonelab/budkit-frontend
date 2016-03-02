@@ -1,6 +1,7 @@
 
 // Start the application
-
 require(["config"], function(){
-    require(["application"])
+    require(["application"], function(){
+
+    })
 });

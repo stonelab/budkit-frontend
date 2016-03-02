@@ -10,15 +10,11 @@ use Route;
 
 class Provider implements Service
 {
-
     protected $application;
 
     public function __construct(Container $application)
     {
-
         $this->application = $application;
-
-
     }
 
     public static function  getPackageDir()

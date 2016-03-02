@@ -6,10 +6,10 @@
             </div>
 
             <div class="panel-body">
-                <form action="/settings/system/permissions/authorities/edit" method="POST"  class="row">
+                <form action="/admin/settings/permissions/add/authority" method="POST"  class="row">
                     <div class="form-group  col-md-5 mbn">
                         <label class="sr-only">Group Name</label>
-                        <input type="text" name="authority-title" class="form-control" placeholder="Group Name" />
+                        <input type="text" name="authority-title" class="form-control" placeholder="Group name in plural form, e.g 'Managers'" />
                     </div>
 
                     <div class="form-group col-md-5 pln prn mbn">
@@ -19,7 +19,7 @@
                             <option value="">Select Parent</option>
                             <tpl:loop foreach="authorities" id="authorities">
                                 <option tpl:value="${authority_id}">
-                                    <tpl:loop limitby="indent"> -- </tpl:loop>
+                                    <tpl:loop limitby="indent">:---- </tpl:loop>
                                     <span><tpl:data value="authority_title" /></span>
                                 </option>
                             </tpl:loop>
@@ -46,7 +46,9 @@
                                 <span class="ionicon ion-minus-round color-clouds mrs"></span>
                             </tpl:loop>
                             <a tpl:href="/settings/system/permissions/authority/${authority_id}"><span><tpl:data value="authority_title" /></span></a>
-                            <a tpl:href="/settings/system/permissions/authority/edit/${authority_id}"><span class="pull-right"><i class="fa fa-cog"></i></span></a>
+                            <span class="ionicon ion-minus-round color-clouds mrs mls"></span>
+                            <span class="color-silver">aid: <tpl:data value="authority_id" /></span>
+                            <a href="#"><span class="pull-right"><i class="fa fa-cog"></i></span></a>
                         </div>
                     </div>
                     <div tpl:id="group${authority_id}" class="panel-collapse collapse">

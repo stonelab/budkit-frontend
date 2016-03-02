@@ -1,7 +1,3 @@
-/**
- * Created by livingstonefultang on 19/12/2013.
- */
-
 // Require JS Configuration
 requirejs.config({
   "paths": {
@@ -17,6 +13,7 @@ requirejs.config({
     "jquery.cookie" : "vendor/jquery.cookie/jquery.cookie",
     //"jquery.scrollbar" : "vendor/jquery/jquery.custom-scrollbar.min",
     "chosen" : "vendor/chosen/chosen.jquery.min",
+    "domReady" : "vendor/domReady/domReady",
     //"jquery.bridget": "vendor/bridget/jquery.bridget",
     "ghostdown": "vendor/ghostdown/ghostdown",
     //"jquery.ghostdown": "vendor/ghost/jquery.ghostdown",
@@ -52,9 +49,6 @@ requirejs.config({
     //"bootstrap.summernote.highlight":"vendor/summernote/summernote-ext-highlight"
   },
   shim: {
-    'jquery': {
-      exports: '$'
-    },
     'jquery.ui' : ['jquery'],
     'ghostdown' : ['jquery','dropzone'],
     //'mes' : ['jquery'],
@@ -64,46 +58,28 @@ requirejs.config({
     //'jquery.bridget': ['jquery'],
     //'jquery.scrollbar': ['jquery'],
     //'jquery.fullcalendar': ['jquery'],
-    'jquery.iframe-transport':['jquery'],
-    'blueimp.fileupload':["jquery.iframe-transport"],
+    //'jquery.iframe-transport':['jquery'],
+    //'blueimp.fileupload':["jquery.iframe-transport"],
     'bootstrap': ['jquery'],
     'jquery.validation': ['jquery'],
     'flat-ui': ['jquery'],
     //'bootstrap.summernote': ['jquery'],
-    "googlemaps":{
-      deps:["async"]
-    },
-    "gmaps": {
-      deps: ["jquery", "googlemaps"],
-      exports: "GMaps"
-    },
+    //"googlemaps":{
+    //  deps:["async"]
+    //},
+    //"gmaps": {
+    //  deps: ["jquery", "googlemaps"],
+    //  exports: "GMaps"
+    //},
     //"autobahn": {
     //  deps: ["when"]
     //}
-    "typeahead.addresspicker":{
+    "typeahead":{
       deps: ['bootstrap'],
+    },
+    "typeahead.addresspicker":{
+      deps: ['typeahead'],
       exports: "AddressPicker"
-    },
-    //"html5formshim":["jquery"],
-
-    ////'jquery.budkit': ['jquery'],
-    ////'jquery.validate': ['jquery'],
-    ////'budkit.uploader': ['jquery'],
-    //'budkit.editor': ['jquery'],
-    //"bootstrap.summernote.highlight": ['jquery']
-    ////'budkit.modal': ['jquery'],
-    ////'budkit.chat': ['jquery'],
-    'budkit.fields': {
-      deps: ['jquery', 'jquery.ui'],
-      exports: "BKFields"
-    },
-    'budkit.form': {
-      deps: ['jquery', 'jquery.ui'],
-      exports: "BKForm"
-    },
-    'budkit.map': {
-      deps:['jquery'],
-      exports: "GMaps"
     }
   }
 });

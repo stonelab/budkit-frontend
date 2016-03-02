@@ -47,3 +47,9 @@ src/theme/vendor/blueimp-load-image
 src/theme/vendor/blueimp-tmpl
 src/theme/vendor/jquery.iframe-transport
 me.jpg
+src/theme/vendor/domReady/.bower.json
+src/theme/vendor/domReady/bower.json
+src/theme/vendor/domReady/domReady.js
+src/theme/vendor/domReady/LICENSE
+src/theme/vendor/domReady/package.json
+src/theme/vendor/domReady/README.md

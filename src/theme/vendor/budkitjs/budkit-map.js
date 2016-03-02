@@ -2,9 +2,11 @@
  * Created by livingstonefultang on 18/09/15.
  */
 
-define(["jquery", "gmaps"], function($, GMaps) {
+define(["jquery", "gmaps"], function( $, GMaps) {
 
     var gmap;
+
+    //exports.bkmap = gmap;
 
     var mapStyles = [{
         "featureType": "landscape.man_made",
@@ -65,7 +67,6 @@ define(["jquery", "gmaps"], function($, GMaps) {
     }, {"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#a2daf2"}]}]
 
     // jQuery code is in here
-    $(document).ready(function () {
         //prettyPrint();
         gmap = new GMaps({
             //scrollwheel: false,
@@ -101,26 +102,19 @@ define(["jquery", "gmaps"], function($, GMaps) {
             }
         });
 
-        //This will need to be loaded from a resource (json) file
-        var markers = [], objects = { hosts:[
-            {lat: 51.507351, lng : -0.127758}
-        ]};
-
-        //Create a marker
-        for (var i = 0 ; i < objects.hosts.length; ++i){
-            var marker = gmap.addMarker({
-                lat : objects.hosts[i].lat,
-                lng : objects.hosts[i].lng,
-            });
-            markers.push(marker);
-        }
-
-    });
-
-    $( window ).resize(function() {
-        $("#map").css("height", "100%");
-        gmap.refresh();
-    });
+        ////This will need to be loaded from a resource (json) file
+        //var markers = [], objects = { hosts:[
+        //    {lat: 51.507351, lng : -0.127758}
+        //]};
+        //
+        ////Create a marker
+        //for (var i = 0 ; i < objects.hosts.length; ++i){
+        //    var marker = gmap.addMarker({
+        //        lat : objects.hosts[i].lat,
+        //        lng : objects.hosts[i].lng,
+        //    });
+        //    markers.push(marker);
+        //}
 
     return gmap;
 });
