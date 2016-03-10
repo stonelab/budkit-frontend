@@ -77,6 +77,11 @@
 .stream-item {
   //min-height: 140px;
   border-bottom: 1px solid lighten(@clouds, 3%);
+  &:hover{
+    .time{
+      display: block !important;
+    }
+  }
 }
 
 .stream {
@@ -295,21 +300,17 @@
     .stream-labels{
       position: relative;
       left: -1px;
-      top: -7px;
+      top: -5px;
       z-index: 1;
       .label{
-        margin: 0 auto 5px;
+        margin: 0 2px 5px;
         width: 1px;
         height: 15px;
-        font-size: 10px;
-        text-transform: uppercase;
-        text-indent: -9999em;
-        &:hover{
-          width: auto;
-          height: 15px;
-          line-height: 12px;
-          text-indent: 0;
-        }
+        font-size: 14px;
+        /* text-transform: uppercase; */
+        font-weight: normal;
+        padding: .2em .6em .3em;
+        cursor: pointer;
       }
       &~.stream-content{
         padding: 50px 15px 0;
@@ -890,6 +891,38 @@ form.stream-flow{
 .stream-detailed {
   padding: @grid-gutter-width * 0.3;
 
+  &-title{
+
+    padding: @grid-gutter-width * 0.5;
+    .person {
+      display: inline-block;
+      z-index: 10;
+      .person-photo{
+        border-radius: 50%;
+      }
+    }
+    .title-body {
+      display: inline-block;
+      margin: 0 10px;
+      vertical-align: top;
+      h1 {
+        margin: 0px;
+        font-size: @font-size-base * 1.15;
+        font-weight: bold;
+        line-height: 35px;
+      }
+
+      .nav-pills {
+        a {
+          padding: 0px 10px 0 0;
+          background: transparent;
+          font-size:  @font-size-base * 0.90;
+        }
+      }
+    }
+
+  }
+
   .stream-activity{
     border: none;
     margin-bottom: 15px;
@@ -898,15 +931,26 @@ form.stream-flow{
   }
 
   .stream-list {
+
     .stream-item {
       border-bottom-color: transparent;
       margin-bottom: @grid-gutter-width;
       p { margin-bottom: 5px }
+
+      &-detailed{
+          padding-left: (60px+ @grid-gutter-width*0.5);
+          h1,h2,h3,h4,h5,h6{
+            font-size: @font-size-base;
+            margin: 10px 0;
+            font-weight: 800;
+          }
+      }
+
     }
     .stream-line {
       display: block;
       width: 1px;
-      left: 37px;
+      left: 36px;
       top: -@grid-gutter-width
     }
     .stream-title {
@@ -964,4 +1008,22 @@ form.stream-flow{
       }
     }
   }
+}
+
+.container-post-aside{
+
+}
+.container-post{
+  position:relative;
+  max-width: 1400px;
+  .container-empty-state{
+    display: none;
+  }
+}
+
+.stream-item-features{
+  color: @silver;
+  //text-align: center;
+  margin: 30px 0;
+  i{ color: @silver; font-size: 40px; display: block; margin-bottom: 5px; }
 }

@@ -9,6 +9,7 @@
                 <textarea class="stream-post form-control" rows="3" name="media_content" placeholder="Say something"></textarea>
                 <input type="hidden" name="csrftoken" tpl:value="${csrftoken}"/>
                 <input type="hidden" name="_method" value="POST"/>
+                <input type="hidden" name="media_target" tpl:value="${reading.object_uri}" />
             </div>
         </form>
     </div>

@@ -5,23 +5,6 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="ionicons ion-gear-b"/>
         </button>
-        <ul class="dropdown-menu pull-right">
-            <li>
-                <a href="#" class="edit">
-                    <span>Edit post</span>
-                </a>
-            </li>
-            <li role="separator" class="divider"></li>
-            <li>
-                <a href="#" class="edit">
-                    <span>Add label</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="delete color-alizarin">
-                    <span class="color-alizarin">Delete post</span>
-                </a>
-            </li>
-        </ul>
+        <tpl:menu tpl:uid="mediamenu:${edgeData.object_uri}" class="dropdown-menu pull-right" />
     </div>
 </tpl:layout>
