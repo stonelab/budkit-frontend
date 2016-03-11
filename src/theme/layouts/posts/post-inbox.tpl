@@ -99,7 +99,7 @@
 
             <tpl:condition on="filter" test="empty" is="0">
                 <div class="stream-list-title">
-                    <i tpl:class="ionicon mrs ion-android-radio-button-on color-${filter}" />
+                    <i tpl:class="ionicon mrs ion-pound color-${filter}" />
                     <span tpl:class=" color-${filter}"><tpl:data value="filter" /></span>
                 </div>
             </tpl:condition>

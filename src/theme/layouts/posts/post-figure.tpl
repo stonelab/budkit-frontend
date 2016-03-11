@@ -12,7 +12,7 @@
                               src="/theme/assets/img/avatars/obr.png"
                               class="person" width="50" height="50"/>
 
-                    <a href="/member/timeline/1AgdAGAEgsd" class="time">
+                    <a href="/post/1AgdAGAEgsd" class="time">
                         <span class="label label-time">01:00 am</span>
                     </a>
 

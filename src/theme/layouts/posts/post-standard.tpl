@@ -13,7 +13,7 @@
                               class="person"
                     />
 
-                    <a tpl:href="/member/timeline/${edgeData.object_uri}" class="time">
+                    <a tpl:href="/post/${edgeData.object_uri}" class="time">
                         <span class="label label-time"><tpl:datetime value="edgeData.object_created_on" format="diff" /></span>
                     </a>
                     <!--  <span class="pins pull-right">

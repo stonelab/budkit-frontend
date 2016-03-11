@@ -11,7 +11,7 @@
                              tpl:href="/member/@${edgeData.story_author.user_name_id}"
                               class="person"
                     />
-                    <a tpl:href="/member/timeline/${edgeData.object_uri}" class="time">
+                    <a tpl:href="/post/${edgeData.object_uri}" class="time">
                         <span class="label label-time"><tpl:datetime value="edgeData.object_created_on" format="diff" /> </span>
                     </a>
                     <tpl:condition on="edgeData.story_object" test="empty" is="0">
