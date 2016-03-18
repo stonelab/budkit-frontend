@@ -35,6 +35,8 @@
     "jquery-validation": "~1.14.0",
     "blueimp-file-upload": "~9.11.2",
     "jquery.iframe-transport": "^1.0.0",
-    "domReady": "^2.0.1"
+    "domReady": "^2.0.1",
+    "svg4everybody": "^2.0.3",
+    "wdt-emoji-bundle": "^0.1.3"
   }
 }

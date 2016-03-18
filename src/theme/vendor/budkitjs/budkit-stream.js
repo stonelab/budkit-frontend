@@ -16,7 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ========================================================== */
-require(["jquery", "typeahead.addresspicker", "gmaps"], function($) {
+define(["jquery"], function($) {
 
     "use strict"
     var BKStream = function(object, options) {
@@ -35,6 +35,8 @@ require(["jquery", "typeahead.addresspicker", "gmaps"], function($) {
         rate: function() {
         } //Will need a seperate BKRating class;
     };
+
+
     //Plugin Defintion
     $.fn.bkstream = function(option) {
         return this.each(function() {
@@ -44,17 +46,18 @@ require(["jquery", "typeahead.addresspicker", "gmaps"], function($) {
             $this.data('bkstream', (new BKStream(this, options)))
         });
     };
+
+
     $.fn.bkstream.defaults = {};
     $.fn.bkstream.Constructor = BKStream;
 
     //Plugin data api
     $(function() {
-
-
         //Plugin data api
         $(document).on('ready', '[data-target]', function(e) {
             e.preventDefault();
             $(this).bkstream();
         })
-    })
+    });
+
 });

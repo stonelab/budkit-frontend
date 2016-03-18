@@ -53,3 +53,5 @@ src/theme/vendor/domReady/domReady.js
 src/theme/vendor/domReady/LICENSE
 src/theme/vendor/domReady/package.json
 src/theme/vendor/domReady/README.md
+src/theme/vendor/svg4everybody
+src/theme/vendor/wdt-emoji-bundle

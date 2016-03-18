@@ -14,6 +14,7 @@ requirejs.config({
     //"jquery.scrollbar" : "vendor/jquery/jquery.custom-scrollbar.min",
     "chosen" : "vendor/chosen/chosen.jquery.min",
     "domReady" : "vendor/domReady/domReady",
+    "emoji": "vendor/wdt-emoji-bundle/emoji.min",
     //"jquery.bridget": "vendor/bridget/jquery.bridget",
     "ghostdown": "vendor/ghostdown/ghostdown",
     //"jquery.ghostdown": "vendor/ghost/jquery.ghostdown",
@@ -37,7 +38,7 @@ requirejs.config({
     "budkit.fields" : "vendor/budkitjs/budkit-fields",
     "budkit.form" : "vendor/budkitjs/budkit-form",
 
-    //"budkit.modal" : "vendor/budkit/budkit-modal",
+    "budkit.stream" : "vendor/budkitjs/budkit-stream",
     "budkit.map" : "vendor/budkitjs/budkit-map",
     "googlemaps" : 'vendor/googlemaps-amd/src/googlemaps',
     "gmaps" : "vendor/gmaps/gmaps.min",
@@ -47,6 +48,8 @@ requirejs.config({
     //"html5formshim":"vendor/html5formshim/build/jquery.html5form.min"
     //
     //"bootstrap.summernote.highlight":"vendor/summernote/summernote-ext-highlight"
+    "svg4everybody":"vendor/svg4everybody/dist/svg4everybody.min",
+    "wdtEmojiBundle":"vendor/wdt-emoji-bundle/wdt-emoji-bundle.min"
   },
   shim: {
     'jquery.ui' : ['jquery'],
@@ -71,11 +74,11 @@ requirejs.config({
     //  deps: ["jquery", "googlemaps"],
     //  exports: "GMaps"
     //},
-    //"autobahn": {
-    //  deps: ["when"]
-    //}
+    "emoji": {
+      exports: "emoji"
+    },
     "typeahead":{
-      deps: ['bootstrap'],
+      deps: ['bootstrap']
     },
     "typeahead.addresspicker":{
       deps: ['typeahead'],

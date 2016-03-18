@@ -211,6 +211,18 @@
         li > a{
           padding: 5px 16px;
         }
+        .dropdown {
+          .dropdown-menu{
+            position: relative;
+            background: @clouds;
+            border-top: 1px solid @concrete;
+            border-bottom: 1px solid @concrete;
+            li > a{
+              //padding: 5px 16px;
+              color: @link-color;
+            }
+          }
+        }
       }
     }
     .meta {
@@ -302,16 +314,6 @@
       left: -1px;
       top: -5px;
       z-index: 1;
-      .label{
-        margin: 0 2px 5px;
-        width: 1px;
-        height: 15px;
-        font-size: 14px;
-        /* text-transform: uppercase; */
-        font-weight: normal;
-        padding: .2em .6em .3em;
-        cursor: pointer;
-      }
       &~.stream-content{
         padding: 50px 15px 0;
       }

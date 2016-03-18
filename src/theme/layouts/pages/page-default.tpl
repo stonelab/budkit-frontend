@@ -20,7 +20,7 @@
                         </div>
                     </tpl:condition>
                       <div class="row">
-                          <tpl:data value="reading.media_content" markup="true" />
+                          <tpl:data value="reading.media_content" markup="true" parsedown="true" />
                       </div>
                 </div>
                 <tpl:import name="foot"/>

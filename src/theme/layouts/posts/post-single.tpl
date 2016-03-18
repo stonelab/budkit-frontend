@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<!DOCTYPE HTML>
 <tpl:layout xmlns:tpl="http://budkit.org/tpl" name="single">
     <div class="container-main" role="main">
         <div class="container-block stream-list-content">
@@ -24,15 +24,8 @@
                             <div class="stream-line"/>
                             <ul class="stream">
                                 <li class="stream-item-detailed">
-                                    <div class="stream-labels mtl mbl">
-                                        <span class="extra label label-warning">task</span>
-                                        <span class="extra label label-danger">urgent</span>
-                                        <span class="extra label label-info">information</span>
-                                        <span class="extra label label-success">done</span>
-                                        <span class="extra label label-default">urgent</span>
-                                    </div>
 
-                                    <div class="body clearfix">
+                                    <div class="body clearfix mtl">
                                         <div class="content clearfix">
                                             <tpl:data value="reading.media_content" parsedown="true" markup="true" />
                                         </div>

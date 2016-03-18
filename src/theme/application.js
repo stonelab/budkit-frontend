@@ -7,7 +7,14 @@ define(["jquery","jquery.cookie", "chosen", "bootstrap","flat-ui"], function() {
 
     // IE8 and below specific scripts
     if ($('html.lt-ie9').size()) {
-        require(['html5shiv'], function(ieScript) {
+        require(['html5shiv'], function() {
+            // ... do stuff
+        });
+    }
+
+    // IE scripts
+    if ($('html.ie').size()) {
+        require(['svg4everybody'], function(ieScript) {
             // ... do stuff
         });
     }
