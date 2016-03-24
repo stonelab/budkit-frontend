@@ -11,7 +11,7 @@
                     <div class="container unit">
                       <h1>Welcome</h1>
                       <p class="highlight">Create a new home page from the admin console</p>
-                        <div class="mbl"><a href="/member/dashboard" class="btn btn-embossed btn-danger btn-lg">Visit Dashboard</a></div>
+                        <div class="mbl"><a href="/member/timeline" class="btn btn-embossed btn-danger btn-lg">Visit Dashboard</a></div>
                   </div>
                 </div>
             </div>
