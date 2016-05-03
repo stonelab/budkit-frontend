@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tpl:layout name="pages" xmlns:tpl="http://budkit.org/tpl">
     <div class="col-md-12 ptm">
-        <div class="panel panel-list">
-
+        <tpl:condition on="pages.items" test="empty" is="1">
+            <div class="container-empty-state">
+                <div class="empty-state">
+                    <img src="/theme/assets/img/placeholders/emptystate.png" />
+                    <h4 class="mtl mbm">Nothing to show</h4>
+                    <p>You have not yet created any pages</p>
+                    <a href="/page/create" class="btn btn-rounded btn-outlined btn-default">Create page</a>
+                </div>
+            </div>
+        </tpl:condition>
+        <tpl:condition on="pages.items" test="empty" is="0">
+            <div class="panel panel-list">
             <div class="panel-heading clearfix">
                 <form class="form-inline col-md-12 col-sm-12" method="POST" action="/settings/system/save">
                     <div class="col-md-3">
@@ -87,6 +97,7 @@
             <tpl:import name="pagination" />
 
         </div>
+        </tpl:condition>
     </div>
 </tpl:layout>
 

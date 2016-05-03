@@ -85,7 +85,7 @@
 }
 
 .stream {
-  margin: 0;
+  margin: 15px 0;
   padding: 0;
   list-style: none;
   li {
@@ -116,10 +116,10 @@
       position: relative;
       &.has-featured-img, &.has-step-number {
         //padding: @grid-gutter-width;
-        padding-left: 30px+ @grid-gutter-width*(5/3);
+        padding-left: 20px+ @grid-gutter-width*(5/3);
         //min-height: (30px+@grid-gutter-width);
         & ~ .stream-activity{
-          padding-left: 30px+ @grid-gutter-width*(5/3);
+          padding-left: 20px+ @grid-gutter-width*(5/3);
         }
       }
       //&:hover{ background: #f9f9f9 }
@@ -158,7 +158,7 @@
     .person{
       cursor: pointer;
       .person-photo {
-        border-radius: 50%;
+        border-radius: 5%;
         position: absolute;
         background: white;
       }
@@ -624,7 +624,7 @@
       display: none;
     }
     .stream-title {
-      background-color: #FDFCFC;
+      background-color: #fbfcfc;
       width: 100%;
       border-bottom: 1px solid @clouds
     }
@@ -658,7 +658,7 @@
          // min-height: 85px;
           &.has-featured-img {
             //padding: @grid-gutter-width;
-            padding-left: 10px+ @grid-gutter-width*(5/3);
+            padding-left: 0px+ @grid-gutter-width*(5/3);
             //min-height: (30px+@grid-gutter-width);
             & ~ .stream-activity{
               padding-left:  @grid-gutter-width*(5/3);
@@ -672,7 +672,8 @@
 
 .stream-list-tabs{
   ul.nav-tabs{
-    padding: 10px 10px 0;
+    padding: 10px 15px 0;
+    background-color: #fbfcfc;;
   }
 }
 
@@ -681,7 +682,7 @@
 }
 
 .stream-list-editor{
-  padding: 10px;
+  padding: @grid-gutter-width * 0.5;
   .stream-editor{
     //background-color: #FDFCFC;
     textarea{
@@ -891,7 +892,7 @@ form.stream-flow{
   }
 }
 .stream-detailed {
-  padding: @grid-gutter-width * 0.3;
+  padding: @grid-gutter-width * 0.5;
 
   &-title{
 
@@ -900,7 +901,7 @@ form.stream-flow{
       display: inline-block;
       z-index: 10;
       .person-photo{
-        border-radius: 50%;
+        border-radius: 5%;
       }
     }
     .title-body {

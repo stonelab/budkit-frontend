@@ -1,7 +1,7 @@
 /**
  * Created by livingstonefultang on 10/27/13.
  */
-define(["jquery","jquery.cookie", "chosen", "bootstrap","flat-ui"], function() {
+define(["webcomponentsjs", "jquery","jquery.cookie", "chosen", "bootstrap","flat-ui"], function() {
 
     var activeTabs = {};
 

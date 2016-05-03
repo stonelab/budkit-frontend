@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tpl:layout name="head" xmlns:tpl="http://budkit.org/tpl">
-    <title><tpl:data value="title" /></title>
+    <title><tpl:data value="title" default="config://setup.site.name" /></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <!-- start: Mobile Specific -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />

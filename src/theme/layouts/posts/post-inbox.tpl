@@ -92,18 +92,12 @@
     </div>
 
 
-    <div class="container-main" role="main">
+    <div class="container-main border-right border-clouds" role="main">
 
-        <div class="container-block stream-list-content background-white">
+        <div class="container-block stream-list-content background-white ">
 
-
-            <tpl:condition on="filter" test="empty" is="0">
-                <div class="stream-list-title">
-                    <i tpl:class="ionicon mrs ion-pound color-${filter}" />
-                    <span tpl:class=" color-${filter}"><tpl:data value="filter" /></span>
-                </div>
-            </tpl:condition>
             <div class="stream-list-tabs">
+
                 <tpl:menu uid="mediamenu" class="nav nav-tabs" />
             </div>
             <div class="stream-list-editor">

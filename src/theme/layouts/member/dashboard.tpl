@@ -7,7 +7,15 @@
                 <tpl:import name="admin/navigation" />
             </div>
             <div class="container-block scroll">
-                 <tpl:block position="main" />
+
+                <div class="cotainer-body clearfix">
+                    <tpl:block position="main" />
+                </div>
+
+
+                <div class="container-footer">
+                    <tpl:import name="foot" />
+                </div>
             </div>
         </div>
         <tpl:import name="modal" />

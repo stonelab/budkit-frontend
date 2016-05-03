@@ -27,6 +27,13 @@
 }
 
 .sidebar {
+  .navbar-inverse{
+    background-color: @link-color;
+  }
+  .navbar-text {
+    font-size: 16px;
+  }
+
   z-index: 3;
   //font-size: 13px; line-height: 1.42222; // 31/18;
   font-size: 95%;
@@ -98,8 +105,8 @@
         &:hover,
         &:focus {
           color: white;
-         // background-color: fade(@brand-secondary, 30%);
-          background-color: @link-color;
+          background-color: fade(@brand-secondary, 30%);
+          border-right: 5px solid @link-color;
         }
       }
       //ul {
@@ -175,6 +182,17 @@
   &.minimized {
     &.sidebar {
       width: @sidebar-width * 0.325 !important;
+
+      .navbar-text{
+        color: transparent;
+        padding: 0px;
+        &:first-letter{
+          color: white;
+          font-size: 35px;
+        }
+      }
+
+
       .profile {
         padding-top: 5px;
         padding-bottom: 5px;

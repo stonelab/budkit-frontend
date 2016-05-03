@@ -17,31 +17,23 @@
         </button>
         -->
         <span class="navbar-text navbar-text-title navbar-left"><tpl:data value="title" /></span>
-
-        <form class="navbar-form navbar-right prs plm mll" action="#" role="search">
+        <form class="navbar-form navbar-right prm plm mll" action="#" role="search">
             <div class="form-group">
                 <div class="input-group">
-                    <input class="form-control flat" id="navbarInput-01" type="search" placeholder="Search"/>
-                      <span class="input-group-btn flat">
-                        <button type="submit" class="btn"><span class="fui-search"></span></button>
-                      </span>
+                  <span class="input-group-btn prm">
+                         <tpl:condition on="action" test="empty" is="false">
+                             <tpl:loop foreach="action">
+
+                                 <a tpl:class="btn ${class}" tpl:href="${link}">
+                                     <tpl:data value="title"/>
+                                 </a>
+
+                             </tpl:loop>
+                         </tpl:condition>
+                    </span>
+                    <input class="form-control" id="navbarInput-01" type="search" placeholder="Search"/>
                 </div>
             </div>
         </form>
-
-        <ul class="nav navbar-nav navbar-right mrl">
-            <tpl:condition on="action" test="empty" is="false">
-                <tpl:loop foreach="action">
-                    <li>
-                        <div class="btn-group mtm  mlm mrn">
-                            <a tpl:class="btn btn-sm ${class}" tpl:href="${link}">
-                                <tpl:data value="title"/>
-                            </a>
-                        </div>
-                    </li>
-                </tpl:loop>
-            </tpl:condition>
-        </ul>
-
     </div>
 </tpl:layout>

@@ -41,10 +41,9 @@
                                     <tr>
                                         <td>
                                             <strong class="mrm"><tpl:data value="name" /></strong>
-                                            <span class="label label-info mll"><tpl:data value="version" /></span>
                                         </td>
-                                        <td></td>
-                                        <td></td>
+                                        <td><span class="label label-info mll"><tpl:data value="version" /></span></td>
+                                        <td><tpl:datetime value="date" format="diff" /></td>
                                     </tr>
                                 </tpl:loop>
                                 </tbody>

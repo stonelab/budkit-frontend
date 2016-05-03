@@ -49,7 +49,8 @@ requirejs.config({
     //
     //"bootstrap.summernote.highlight":"vendor/summernote/summernote-ext-highlight"
     "svg4everybody":"vendor/svg4everybody/dist/svg4everybody.min",
-    "wdtEmojiBundle":"vendor/wdt-emoji-bundle/wdt-emoji-bundle.min"
+    "wdtEmojiBundle":"vendor/wdt-emoji-bundle/wdt-emoji-bundle.min",
+    "webcomponentsjs": "vendor/webcomponentsjs/webcomponents.min"
   },
   shim: {
     'jquery.ui' : ['jquery'],

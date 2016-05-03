@@ -3,7 +3,11 @@
     <div class="stream-list">
         <tpl:condition on="stories" test="empty" is="1">
             <div class="container-empty-state">
-                <p>Nothing to show</p>
+                <div class="empty-state">
+                    <img src="/theme/assets/img/placeholders/emptystate.png" />
+                    <h4 class="mtl mbm">Nothing to show</h4>
+                    <p>Wowzies! looks like there is absolutely no posts to display</p>
+                </div>
             </div>
         </tpl:condition>
         <tpl:condition on="stories" test="empty" is="0">

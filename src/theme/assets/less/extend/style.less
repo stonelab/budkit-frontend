@@ -19,7 +19,18 @@
 //  }
 //}
 
+.position{
+  &-relative{
 
+    position: relative;
+
+  }
+  &-bottom{
+    position: absolute;
+    bottom: 50px; left: 0; right: 0;
+    //text-align: center;
+  }
+}
 
 //Layouts
 .container {
@@ -29,6 +40,9 @@
   }
   &-overflow{
     overflow: auto;
+  }
+  &-round{
+    border-radius: 50%;
   }
   &-box{
     padding:@grid-gutter-width * 1/3;
@@ -82,6 +96,23 @@
     }
     &.no-scroll-x{
       overflow-x: hidden;
+    }
+  }
+  &-footer{
+    height: @navbar-height-base;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    //background-color: white;
+    //border-top: 1px solid @clouds;
+    //position: absolute;
+    footer{
+      background: none;
+      padding: 0px;
+    }
+
+    & ~ .container-block{
+      margin-bottom: -@navbar-height-base;
     }
   }
   &-heading{
@@ -142,12 +173,12 @@
     }
   }
   &-iside {
-    width: 40%;
+    width: 45%;
     position: absolute;
     right:0;
     //border-right: 1px solid @clouds;
     &:not(.hide) ~ .container-main {
-      margin-right: 40%;
+      margin-right: 45%;
     }
   }
   &-pside {
@@ -215,7 +246,7 @@
     position: relative;
     display: table;
     width: 100%;
-    & * { display:table-cell; vertical-align: middle }
+    & .empty-state { display:table-cell; vertical-align: middle }
     & > i{ font-size: 100px; }
   }
   &-navigation{
@@ -227,19 +258,29 @@
       .navbar{
         //.navbar-fixed-top;
       }
-      & ~ .container-main {
+      &:not(.float) ~ .container-main {
         margin-top: @navbar-height-base + 3px; //adding 1px to account for the bottom border
       }
-      & ~ .container-sside, & ~ .container-side, & ~ .container-aside{
+      &:not(.float) ~ .container-sside, & ~ .container-side, & ~ .container-aside{
         top: @navbar-height-base + 3px;
       }
     }
-    & ~ .container-block{
+    &:not(.float) ~ .container-block{
       top: @navbar-height-base + 3px;
     }
     &.lg{
-      & ~ .container-block{
+      &:not(.float) ~ .container-block{
         top: @navbar-height-large + 3px;
+      }
+    }
+    &.float{
+      position: fixed;
+      left: 0; right: 0; top: 0;
+      background: transparent;
+      border-bottom: none;
+      .navbar{
+         .navbar-inverse;
+          background: transparent;
       }
     }
   }
@@ -375,36 +416,44 @@
 
 .hero{
   padding: 0 ;
-  margin-bottom: @hero-padding * 0.5;
+  //margin-bottom: @hero-padding * 0.5;
   background-color: @hero-bg;
   //background-image: url(@hero-bg-img);
   background-position: @hero-bg-pos;
   background-size: @hero-bg-size;
+  display: table;
+  width: 100%;
+  height: 100%;
+
 
   .container{
     border-radius: @border-radius-large; // Only round corners at higher resolutions if contained in a container
   }
   .unit {
     text-align: @hero-text-align;
-    padding-top: @hero-padding;
+    //padding-top: @hero-padding;
     font-size: (@font-size-base * 1.5);
     //font-weight: 200;
     line-height: (@line-height-base * 1.5);
     color: @hero-color;
+    display: table-cell;
+    vertical-align: middle;
     h1 {
       line-height: 1;
       color: @hero-heading-color;
       font-weight: 300;
       margin-bottom: @hero-padding*0.25;
+      font-size: 37px;
     }
     p {
       line-height: 1.4;
       margin-bottom: @hero-padding *0.5;
     }
     .highlight {
-      background: rgba(89, 125, 170, 0.4);
+      //background: rgba(89, 125, 170, 0.4);
       display: inline-block;
       padding: 5px 15px 5px;
+      font-size: 21px;
     }
   }
   .unit-2{
@@ -416,6 +465,19 @@
   }
 }
 
+.map-hero{
+  height: 100%;
+  position: relative;
+
+  .hero{
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;
+    z-index: 100;
+    background: fade(@brand-primary, 85%);
+  }
+
+}
+
 .marketing {
   .marketing-title {
     text-align: center;
@@ -425,6 +487,10 @@
     font-size: (@font-size-base * 3);
     font-weight: 300;
     line-height: 1.1
+  }
+  h3 {
+    //text-transform: uppercase;
+    font-size: 110%;
   }
   p {
     font-size: (@font-size-base *1.2 );
@@ -438,6 +504,12 @@
       font-weight: 300;
       font-size: (@font-size-base * 1.7);
     }
+    h3 {
+      //font-weight: 400;
+      font-size: (@font-size-base * 1.4);
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
     p {
       font-size: 18px;
       //color: darken(@gray-light, 20%);
@@ -450,7 +522,16 @@
     text-align: center;
   }
   &.footer {
-    padding: 2*@grid-gutter-width 0;
+    //padding: 2*@grid-gutter-width 0;
+  }
+
+  .featurette-icon{
+    font-size: 50px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
   }
 }
 
