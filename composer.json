@@ -1,7 +1,7 @@
 {
     "name": "budkit/frontend",
     "description": "A front-end theme for budkit/cms",
-    "license": "GPLv3",
+    "license": "MIT",
     "authors": [
         {
             "name": "Livingstone Fultang",
