@@ -28,12 +28,16 @@
                             <td><tpl:data value="name" /></td>
                             <td><tpl:data value="current" /></td>
                             <td>
+                              <span>
                                 <tpl:condition on="test" test="equals" is="Passed">
                                     <strong class="color-green-sea">Passed</strong>
                                 </tpl:condition>
+                              </span>
+                              <span>
                                 <tpl:condition on="test" test="equals" is="Failed">
                                     <strong class="color-alizarin">Failed</strong>
                                 </tpl:condition>
+                              </span>
                             </td>
                         </tr>
                     </tpl:loop>
