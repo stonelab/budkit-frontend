@@ -34,12 +34,12 @@ requirejs.config({
     //"budkit.uploader" : "vendor/budkit/budkit-uploader",
     //"budkit.chat" : "vendor/budkit/budkit-chat",
 
-    "budkit.editor" : "vendor/budkitjs/budkit-editor",
-    "budkit.fields" : "vendor/budkitjs/budkit-fields",
-    "budkit.form" : "vendor/budkitjs/budkit-form",
+    "budkit.editor" : "scripts/budkitjs/budkit-editor",
+    "budkit.fields" : "scripts/budkitjs/budkit-fields",
+    "budkit.form" : "scripts/budkitjs/budkit-form",
 
-    "budkit.stream" : "vendor/budkitjs/budkit-stream",
-    "budkit.map" : "vendor/budkitjs/budkit-map",
+    "budkit.stream" : "scripts/budkitjs/budkit-stream",
+    "budkit.map" : "scripts/budkitjs/budkit-map",
     "googlemaps" : 'vendor/googlemaps-amd/src/googlemaps',
     "gmaps" : "vendor/gmaps/gmaps.min",
     //"google.prettify":"//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify",
