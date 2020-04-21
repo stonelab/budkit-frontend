@@ -43,6 +43,7 @@ class Provider implements Service
         $this->application->config->set("design.theme.provider", "budkit/frontend");
         $this->application->config->set("design.theme.name", "theme");
 
+
         //Register the theme
         $event->setResult( $themes ); //all members who call this even need to append to the result;
 
